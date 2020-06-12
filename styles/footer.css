@@ -1,0 +1,24 @@
+footer {
+    border-top: 2px solid #e5e5e5;
+    height: 90px;
+    width: 1088px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.02em;
+}
+
+footer .icons a:not(:last-child) {
+    margin-right: 12px;
+}
+
+footer .icons a:last-child {
+    margin-right: 8px;
+}
+
+footer:not(a) {
+    color: #e5e5e5;
+}
+
+.v_border {
+    border: 0.5px solid #e5e5e5;
+}
