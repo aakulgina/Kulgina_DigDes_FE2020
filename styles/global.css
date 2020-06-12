@@ -1,0 +1,47 @@
+a {
+    color: #34ACA7;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav_desc {
+    font-size: 10px;
+    line-height: 19px;
+    font-style: italic;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify_c {
+    display: flex;
+    justify-content: center;
+}
+
+.justify_b {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align_c {
+    display: flex;
+    align-items: center;
+}
+
+.ml6 {
+    margin-left: 6px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
