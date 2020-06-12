@@ -1,0 +1,154 @@
+body {
+    margin-top: 46px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+main {
+    width: 896px;
+}
+
+.content {
+    min-height: calc(100vh - 186px);
+    width: 1088px;
+}
+
+.banner {
+    background-image: url(https://sun9-50.userapi.com/c858220/v858220967/205289/os80kzSIq4g.jpg);
+    background-size: cover;
+    height: 445px;
+}
+
+.caption {
+    margin-top: 285px;
+}
+
+.caption_header {
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    font-style: italic;
+}
+
+span.caption_header {
+    width: 272px;
+    height: 49px;
+    background-color: #FFFFFF;
+}
+
+.caption_desc {
+    color: #FFFFFF;
+    line-height: 14px;
+    letter-spacing: 0em;
+    font-style: italic;
+}
+
+span.caption_desc {
+    width: 497px;
+    height: 42px;
+    background-color: #000000;
+}
+
+.main_nav {
+    width: 223.5px;
+    height: 85px;
+    background-color: #EFF8F7;
+    line-height: 18px;
+    font-size: 18px;
+    color: #34ACA7;
+    flex: 1 1 auto;
+}
+
+div .main_nav:not(:first-child) {
+    border-left: 0.5px solid white;
+}
+
+.main_nav a, .main_nav span {
+    padding-left: 20px;
+}
+
+.main_nav_active {
+    background-color: #D9EFEC;
+}
+
+.email {
+    border-top: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
+    height: 50px;
+}
+
+.email img {
+    margin-left: 18px;
+}
+
+.email_news {
+    line-height: 16px;
+    margin-left: 16px;
+    margin-right: 24px;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+form input, form button {
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+input {
+    font-size: 10px;
+    line-height: 10px;
+    width: 160px;
+    height: 22px;
+    padding: 6px;
+}
+
+input::-webkit-input-placeholder {
+    color: #e5e5e5;
+}
+
+input::-moz-placeholder {
+    color: #e5e5e5;
+}
+
+.subscribe {
+    width: 80px;
+    height: 23px;
+    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+    border-radius: 2px;
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0px 18px;
+}
+
+.articles_wrap {
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 207px;
+}
+
+.card_image {
+    margin-bottom: 11px;
+}
+
+.card_image img {
+    border: 2px solid #e5e5e5
+}
+
+.card_title {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    margin-bottom: 9px;
+}
+
+.article_margin {
+    margin-bottom: 11px;
+}
+
+.data {
+    color: #e5e5e5;
+}
