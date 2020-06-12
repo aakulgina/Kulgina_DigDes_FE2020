@@ -1,0 +1,5 @@
+@media all and (min-width: 1177px) {
+    .main_nav .nav_desc {
+        visibility: visible;
+    }
+}
