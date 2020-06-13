@@ -63,16 +63,12 @@
 
 @media all and (min-width: 769px) and (max-width: 992px) {
     footer {
-        width: 716px;
+        width: 712px;
         height: 82px;
     }
 
-    main {
-        width: 710px;
-    }
-
-    .content {
-        width: 716px
+    main, .content {
+        width: 712px;
     }
 
     .aside_nav {
@@ -83,7 +79,7 @@
 
     aside {
         justify-content: space-between;
-        width: 710px;
+        width: 712px;
         height: 160px;
         margin-bottom: 31px;
     }
