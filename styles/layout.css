@@ -30,12 +30,10 @@ main {
     line-height: 22px;
     letter-spacing: 0.01em;
     font-style: italic;
-}
-
-span.caption_header {
     width: 272px;
     height: 49px;
     background-color: #FFFFFF;
+    justify-content: center;
 }
 
 .caption_desc {
@@ -43,9 +41,7 @@ span.caption_header {
     line-height: 14px;
     letter-spacing: 0em;
     font-style: italic;
-}
-
-span.caption_desc {
+    justify-content: center;
     width: 497px;
     height: 42px;
     background-color: #000000;
