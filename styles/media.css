@@ -102,16 +102,16 @@
 
 @media all and (min-width: 481px) and (max-width: 768px) {
     footer {
-        width: 460px;
+        width: 440px;
         height: 78px;
     }
 
     .content {
-        width: 460px;
+        width: 440px;
     }
 
     main {
-        width: 545px;
+        width: 440px;
     }
 }
 
