@@ -1,12 +1,12 @@
-@media all and (min-width: 1177px) {
+@media all and (max-width: 1176px) {
     .main_nav .nav_desc {
-        visibility: visible;
+        display: none;
     }
 }
 
 @media all and (max-width: 768px) {
     .slider {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -60,7 +60,7 @@
 
 @media all and (max-width: 992px) {
     .aside_social {
-        visibility: hidden;
+        display: none;
     }
 
     .content {
