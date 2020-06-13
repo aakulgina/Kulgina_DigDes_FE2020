@@ -150,6 +150,14 @@
         justify-content: flex-start;
         padding-left: 10px;
     }
+
+    .caption_desc {
+        font-size: 12px;
+        line-height: 12px;
+        width: 420px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
 }
 
 @media all and (max-width: 480px) {
