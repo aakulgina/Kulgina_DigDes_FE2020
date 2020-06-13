@@ -15,8 +15,26 @@
         width: 896px;
     }
 
+    body {
+        margin-top: 50px;
+    }
+
     main {
         width: 712px;
+    }
+
+    .email {
+        height: 74px;
+    }
+
+    .email_news {
+        margin-right: 0px;
+        margin-left: 18px;
+        width: 363px;
+    }
+
+    .email img {
+        margin-left: 15px;
     }
 }
 
