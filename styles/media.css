@@ -14,12 +14,20 @@
     footer, .content {
         width: 896px;
     }
+
+    main {
+        width: 712px;
+    }
 }
 
 @media all and (min-width: 769px) and (max-width: 992px) {
     footer {
         width: 716px;
         height: 82px;
+    }
+
+    main {
+        width: 710px;
     }
 
     .content {
@@ -45,6 +53,10 @@
     .content {
         width: 460px;
     }
+
+    main {
+        width: 545px;
+    }
 }
 
 @media all and (max-width: 480px) {
@@ -55,6 +67,10 @@
 
     .content {
         width: 429px;
+    }
+
+    main {
+        width: 480px;
     }
 }
 
