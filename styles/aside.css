@@ -28,7 +28,7 @@ aside > ul > li {
     margin-left: 12px;
 }
 
-aside > button {
+.aside_social > button {
     font-size: 10px;
     line-height: 12px;
     height: 30px;
@@ -39,7 +39,7 @@ aside > button {
     background-color: white;
     width: 140px;
     font-style: italic;
-    margin-top: 12px; /**/
+    margin-top: 12px;
 }
 
 .community {
