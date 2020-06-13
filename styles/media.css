@@ -85,14 +85,9 @@
     }
 
     aside > ul > li {
-        padding-bottom: 0px;
         width: 100px;
         height: 62px;
         justify-content: center;
-    }
-
-    .aside_label {
-        margin-left: 0px;
     }
 }
 
@@ -201,6 +196,14 @@
     aside > ul {
         display: flex;
         flex-direction: row;
+    }
+
+    aside > ul > li {
+        padding-bottom: 0px;
+    }
+
+    .aside_label {
+        margin-left: 0px;
     }
 
     body {
