@@ -141,6 +141,15 @@
     div.email > div {
         margin-top: 5px;
     }
+
+    .caption_header {
+        font-size: 20px;
+        line-height: 20px;
+        width: 430px;
+        opacity: 0.6;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
 }
 
 @media all and (max-width: 480px) {
