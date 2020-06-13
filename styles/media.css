@@ -160,6 +160,14 @@
         justify-content: flex-start;
         padding-left: 20px;
     }
+
+    .banner {
+        height: 331px;
+    }
+
+    .caption {
+        margin-top: 244px;
+    }
 }
 
 @media all and (max-width: 480px) {
