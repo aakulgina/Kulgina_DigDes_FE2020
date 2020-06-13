@@ -173,6 +173,16 @@
         height: 70px;
         width: 54px;
     }
+
+    aside > ul {
+        margin-left: 10px;
+        width: 369px;
+        justify-content: space-between;
+    }
+
+    aside {
+        height: 110px;
+    }
 }
 
 @media all and (max-width: 480px) {
