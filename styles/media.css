@@ -36,3 +36,9 @@
         height: 78px;
     }
 }
+
+@media all and (max-width: 992px) {
+    .aside_social {
+        visibility: hidden;
+    }
+}
