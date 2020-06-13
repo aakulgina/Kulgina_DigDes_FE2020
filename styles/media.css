@@ -87,6 +87,13 @@
         height: 160px;
     }
 
+    aside > ul > li {
+        padding-bottom: 0px;
+        width: 100px;
+        height: 62px;
+        justify-content: center;
+    }
+
     body {
         margin-top: 0px;
     }
