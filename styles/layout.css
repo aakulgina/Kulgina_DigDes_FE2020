@@ -128,6 +128,7 @@ input::-moz-placeholder {
 
 .card {
     width: 207px;
+    margin-bottom: 14px;
 }
 
 .card_image {
