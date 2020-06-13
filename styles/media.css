@@ -163,6 +163,16 @@
     .caption {
         margin-top: 244px;
     }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo img {
+        height: 70px;
+        width: 54px;
+    }
 }
 
 @media all and (max-width: 480px) {
