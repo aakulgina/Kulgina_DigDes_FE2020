@@ -124,6 +124,10 @@
         margin-right: 5px;
         margin-left: 10px;
     }
+
+    .email img {
+        margin-left: 5px;
+    }
 }
 
 @media all and (max-width: 480px) {
