@@ -146,6 +146,7 @@
         font-size: 20px;
         line-height: 20px;
         width: 430px;
+        height: 47px;
         opacity: 0.6;
         justify-content: flex-start;
         padding-left: 10px;
@@ -155,6 +156,7 @@
         font-size: 12px;
         line-height: 12px;
         width: 420px;
+        height: 40px;
         justify-content: flex-start;
         padding-left: 20px;
     }
