@@ -78,6 +78,7 @@
     .aside_nav {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     aside {
