@@ -36,6 +36,15 @@
     .email img {
         margin-left: 15px;
     }
+
+    .card {
+        width: 159px;
+    }
+
+    .card_image img {
+        width: 159px;
+        height: 113px;
+    }
 }
 
 @media all and (min-width: 769px) and (max-width: 1176px) {
