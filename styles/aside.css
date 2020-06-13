@@ -1,5 +1,7 @@
 aside {
     font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 aside > div {
