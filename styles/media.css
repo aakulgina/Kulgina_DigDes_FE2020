@@ -38,6 +38,20 @@
     }
 }
 
+@media all and (min-width: 769px) and (max-width: 1176px) {
+    .main_nav {
+        width: 177.5px;
+        height: 35px;
+        line-height: 14px;
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .main_nav a {
+        padding-left: 0px;
+    }
+}
+
 @media all and (min-width: 769px) and (max-width: 992px) {
     footer {
         width: 716px;
