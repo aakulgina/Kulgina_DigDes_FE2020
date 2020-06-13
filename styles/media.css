@@ -94,6 +94,10 @@
         justify-content: center;
     }
 
+    .aside_label {
+        margin-left: 0px;
+    }
+
     body {
         margin-top: 0px;
     }
