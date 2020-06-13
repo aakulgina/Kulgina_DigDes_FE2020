@@ -113,6 +113,17 @@
     main {
         width: 440px;
     }
+
+    .email {
+        height: 96px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .email_news {
+        margin-right: 5px;
+        margin-left: 10px;
+    }
 }
 
 @media all and (max-width: 480px) {
