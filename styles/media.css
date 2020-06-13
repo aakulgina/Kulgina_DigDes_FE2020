@@ -82,6 +82,12 @@
 
     aside {
         justify-content: space-between;
+        width: 710px;
+        height: 160px;
+    }
+
+    body {
+        margin-top: 0px;
     }
 }
 
