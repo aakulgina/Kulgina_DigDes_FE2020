@@ -237,6 +237,10 @@
         font-size: 22px;
         line-height: 21px;
     }
+
+    .card_image img {
+        width: 100%;
+    }
 }
 
 @media all and (max-width: 992px) {
