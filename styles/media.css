@@ -241,6 +241,12 @@
     .card_image img {
         width: 100%;
     }
+
+    aside {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        height: 200px;
+    }
 }
 
 @media all and (max-width: 992px) {
