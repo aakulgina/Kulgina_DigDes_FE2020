@@ -198,6 +198,16 @@
         display: flex;
         align-items: flex-end;
     }
+
+    .caption_header {
+        font-size: 20px;
+        line-height: 20px;
+        width: calc(100vw - 10px);
+        height: 47px;
+        opacity: 0.6;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
 }
 
 @media all and (max-width: 992px) {
