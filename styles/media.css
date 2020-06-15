@@ -45,23 +45,21 @@
         margin-left: 15px;
     }
 
-    .card {
+    .card, .card_image img {
         width: 159px;
     }
 
     .card_image img {
-        width: 159px;
         height: 113px;
     }
 }
 
 @media all and (min-width: 769px) and (max-width: 992px) {
     footer {
-        width: 712px;
         height: 82px;
     }
 
-    .content {
+    .content, footer {
         width: 712px;
     }
 
@@ -73,7 +71,6 @@
 
     aside {
         justify-content: space-between;
-        width: 712px;
         height: 160px;
         margin-bottom: 31px;
     }
