@@ -222,6 +222,12 @@
         flex-direction: column;
         align-content: center;
     }
+
+    .card {
+        font-size: 18px;
+        line-height: 20px;
+        width: calc(100vw - 130px)
+    }
 }
 
 @media all and (max-width: 992px) {
