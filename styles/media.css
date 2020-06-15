@@ -4,12 +4,6 @@
     }
 }
 
-@media all and (max-width: 768px) {
-    .slider, .nav_icon {
-        display: none;
-    }
-}
-
 @media all and (min-width: 993px) and (max-width: 1176px) {
     footer, .content {
         width: 896px;
@@ -200,6 +194,10 @@
 }
 
 @media all and (max-width: 768px) {
+    .slider, .nav_icon {
+        display: none;
+    }
+    
     footer {
         height: 78px;
     }
