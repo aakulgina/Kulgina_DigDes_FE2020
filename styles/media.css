@@ -93,15 +93,10 @@
 
 @media all and (min-width: 481px) and (max-width: 768px) {
     footer {
-        width: 440px;
         height: 78px;
     }
 
-    .content {
-        width: 440px;
-    }
-
-    main {
+    .content, main, footer {
         width: 440px;
     }
 
