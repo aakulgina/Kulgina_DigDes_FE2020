@@ -184,16 +184,11 @@
         height: 78px;
     }
 
-    .content {
-        width: 100%;
-    }
-
-    main {
+    main, .content, .banner, .card_image img {
         width: 100%;
     }
 
     .banner {
-        width: 100%;
         height: calc(100vw - 100px);
         display: flex;
         align-items: flex-end;
@@ -236,10 +231,6 @@
     .card_title {
         font-size: 22px;
         line-height: 21px;
-    }
-
-    .card_image img {
-        width: 100%;
     }
 
     aside {
