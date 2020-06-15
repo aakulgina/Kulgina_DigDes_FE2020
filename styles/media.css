@@ -232,6 +232,11 @@
     .data + a {
         font-size: 16px;
     }
+
+    .card_title {
+        font-size: 22px;
+        line-height: 21px;
+    }
 }
 
 @media all and (max-width: 992px) {
