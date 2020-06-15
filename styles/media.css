@@ -180,16 +180,16 @@
 
 @media all and (max-width: 480px) {
     footer {
-        width: 90%;
+        width: 92%;
         height: 78px;
     }
 
     .content {
-        width: 429px;
+        width: 100%;
     }
 
     main {
-        width: 480px;
+        width: 100%;
     }
 }
 
