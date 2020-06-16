@@ -260,3 +260,13 @@
         margin-top: 0px;
     }
 }
+
+@media all and (min-width: 993px) {
+    aside {
+        width: 140px;
+    }
+
+    li {
+        padding-bottom: 31px;
+    }
+}
