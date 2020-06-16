@@ -57,11 +57,11 @@ main {
     flex: 1 1 auto;
 }
 
-div .main_nav:not(:first-child) {
+.main_nav:not(:first-child) {
     border-left: 0.5px solid white;
 }
 
-.main_nav a, .main_nav span {
+.main_nav {
     padding-left: 20px;
 }
 
