@@ -7,11 +7,11 @@ footer {
     letter-spacing: -0.02em;
 }
 
-footer .icons a:not(:last-child) {
+.icons a:not(:last-child) {
     margin-right: 12px;
 }
 
-footer .icons a:last-child {
+.icons a:last-child {
     margin-right: 8px;
 }
 
