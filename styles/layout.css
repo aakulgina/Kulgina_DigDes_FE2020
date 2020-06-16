@@ -83,8 +83,7 @@ div .main_nav:not(:first-child) {
 
 .email_news {
     line-height: 16px;
-    margin-left: 16px;
-    margin-right: 24px;
+    margin: 0px 24px 0px 16px;
     letter-spacing: 0;
     font-style: italic;
 }
