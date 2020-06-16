@@ -189,7 +189,7 @@
 }
 
 @media all and (max-width: 768px) {
-    .slider, .nav_icon {
+    .slider, .nav-icon {
         display: none;
     }
     
