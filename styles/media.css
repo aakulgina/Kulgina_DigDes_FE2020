@@ -73,7 +73,7 @@
         margin-bottom: 31px;
     }
 
-    aside > ul > li {
+    li {
         width: 100px;
         height: 62px;
         justify-content: center;
@@ -125,7 +125,7 @@
         width: 54px;
     }
 
-    aside > ul {
+    ul {
         margin-left: 10px;
         width: 369px;
     }
@@ -136,7 +136,7 @@
 }
 
 @media all and (max-width: 480px) {
-    aside > ul, footer {
+    ul, footer {
         width: 92%;
     }
 
@@ -225,7 +225,7 @@
         justify-content: flex-start;
     }
 
-    aside > ul {
+    ul {
         justify-content: space-between;
     }
 }
@@ -243,7 +243,7 @@
         flex-direction: row;
     }
 
-    aside > ul {
+    ul {
         display: flex;
         flex-direction: row;
     }
