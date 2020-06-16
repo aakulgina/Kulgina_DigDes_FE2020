@@ -248,10 +248,6 @@
         flex-direction: row;
     }
 
-    aside > ul > li {
-        padding-bottom: 0px;
-    }
-
     .aside_label {
         margin-left: 0px;
     }
