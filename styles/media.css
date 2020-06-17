@@ -1,11 +1,11 @@
 @media all and (max-width: 1176px) {
-    .main_nav .nav_desc {
+    .desc {
         display: none;
     }
 }
 
 @media all and (min-width: 993px) and (max-width: 1176px) {
-    footer, .content {
+    footer, .l-content {
         width: 896px;
     }
 
@@ -19,15 +19,12 @@
         width: 712px;
     }
     
-    .main_nav {
+    .slider-tab {
         width: 177.5px;
         height: 35px;
         line-height: 14px;
         font-size: 14px;
         align-items: center;
-    }
-
-    .main_nav a {
         padding-left: 0px;
     }
 
@@ -35,19 +32,19 @@
         height: 74px;
     }
 
-    .email_news {
+    .email-news {
         width: 363px;
     }
 
-    .email img {
+    .email-icon {
         margin-left: 15px;
     }
 
-    .card, .card_image img {
+    .article, .article-image {
         width: 159px;
     }
 
-    .card_image img {
+    .article-image {
         height: 113px;
     }
 }
@@ -57,11 +54,11 @@
         height: 82px;
     }
 
-    .content, footer {
+    .l-content, footer {
         width: 712px;
     }
 
-    .aside_nav {
+    .nav {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -81,19 +78,19 @@
 }
 
 @media all and (min-width: 481px) and (max-width: 768px) {
-    .content, main, footer {
+    .l-content, main, footer {
         width: 440px;
     }
 
-    .email_news {
+    .email-news {
         margin: 0px 5px 0px 10px;
     }
 
-    .email img {
+    .email-icon {
         margin-left: 5px;
     }
 
-    .subscribe {
+    .email-button {
         margin: 0px 5px 0px 18px;
     }
 
@@ -102,11 +99,11 @@
         margin-left: 7px;
     }
 
-    .caption_header {
+    .banner-header {
         width: 430px;
     }
 
-    .caption_desc {
+    .banner-text {
         width: 420px;
         padding-left: 20px;
     }
@@ -140,7 +137,7 @@
         width: 92%;
     }
 
-    main, .content, .banner, .card_image img {
+    main, .l-content, .banner, .article-image {
         width: 100%;
     }
 
@@ -148,31 +145,31 @@
         height: calc(100vw - 100px);
     }
 
-    .caption_header {
+    .banner-header {
         width: calc(100vw - 10px);
     }
     
-    .caption_desc {
+    .banner-text {
         width: calc(100vw - 5px);
         padding-left: 5px;
     }
 
-    .articles_wrap {
+    .l-articles {
         flex-direction: column;
         align-content: center;
     }
 
-    .card {
+    .article {
         font-size: 18px;
         line-height: 20px;
         width: calc(100vw - 130px)
     }
 
-    .data + a {
+    .article-data + a {
         font-size: 16px;
     }
 
-    .card_title {
+    .article-title {
         font-size: 22px;
         line-height: 21px;
     }
@@ -209,7 +206,7 @@
         align-items: flex-end;
     }
 
-    .caption_header {
+    .banner-header {
         font-size: 20px;
         line-height: 20px;
         height: 47px;
@@ -218,7 +215,7 @@
         padding-left: 10px;
     }
 
-    .caption_desc {
+    .banner-text {
         font-size: 12px;
         line-height: 12px;
         height: 40px;
@@ -231,11 +228,11 @@
 }
 
 @media all and (max-width: 992px) {
-    .aside_social {
+    .social {
         display: none;
     }
 
-    .content {
+    .l-content {
         flex-direction: column;
     }
 
@@ -248,7 +245,7 @@
         flex-direction: row;
     }
 
-    .aside_label {
+    .nav-label {
         margin-left: 0px;
     }
 

@@ -1,0 +1,154 @@
+.desc {
+    font-size: 10px;
+    line-height: 19px;
+    font-style: italic;
+}
+
+.desc-nav {
+    margin-top: 10px;
+}
+
+.nav-label {
+    margin-left: 12px;
+}
+
+.logo {
+    background-color: #000000;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+.social-button {
+    font-size: 10px;
+    line-height: 12px;
+    height: 30px;
+    color: #34ACA7;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    background-color: white;
+    width: 140px;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+.social-community {
+    border-bottom: 1px dashed #e5e5e5;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 0px;
+}
+
+.banner {
+    background-image: url(https://sun9-50.userapi.com/c858220/v858220967/205289/os80kzSIq4g.jpg);
+    background-size: cover;
+    height: 445px;
+}
+
+.banner-caption {
+    margin-top: 285px;
+}
+
+.banner-header {
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    font-style: italic;
+    width: 272px;
+    height: 49px;
+    background-color: #FFFFFF;
+    justify-content: center;
+}
+
+.banner-text {
+    color: #FFFFFF;
+    line-height: 14px;
+    letter-spacing: 0em;
+    font-style: italic;
+    justify-content: center;
+    width: 497px;
+    height: 42px;
+    background-color: #000000;
+}
+
+.slider-tab {
+    width: 223.5px;
+    height: 85px;
+    background-color: #EFF8F7;
+    line-height: 18px;
+    font-size: 18px;
+    color: #34ACA7;
+    flex: 1 1 auto;
+    padding-left: 20px;
+}
+
+.slider-tab:not(:first-child) {
+    border-left: 0.5px solid white;
+}
+
+.is-slider-tab-active {
+    background-color: #D9EFEC;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
+    height: 50px;
+}
+
+.email-icon {
+    margin-left: 18px;
+}
+
+.email-news {
+    line-height: 16px;
+    margin: 0px 24px 0px 16px;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+.email-button {
+    width: 80px;
+    height: 23px;
+    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+    border-radius: 2px;
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0px 18px;
+}
+
+.article {
+    width: 207px;
+    margin-bottom: 14px;
+}
+
+.article-image {
+    margin-bottom: 11px;
+    border: 2px solid #e5e5e5;
+}
+
+.article-title {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    margin-bottom: 9px;
+}
+
+.article-margin {
+    margin-bottom: 11px;
+}
+
+.article-data {
+    color: #e5e5e5;
+}
+
+.icon-link:not(:last-child) {
+    margin-right: 12px;
+}
+
+.icon-link:last-child {
+    margin-right: 8px;
+}

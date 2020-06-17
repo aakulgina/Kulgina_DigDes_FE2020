@@ -1,0 +1,43 @@
+body {
+    margin-top: 46px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: #34ACA7;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul {
+    font-size: 14px;
+    line-height: 14px;
+    font-style: italic;
+}
+
+form input, form button {
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+input {
+    font-size: 10px;
+    line-height: 10px;
+    width: 160px;
+    height: 22px;
+    padding: 6px;
+}
+
+input::-webkit-input-placeholder {
+    color: #e5e5e5;
+}
+
+input::-moz-placeholder {
+    color: #e5e5e5;
+}

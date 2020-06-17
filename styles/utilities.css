@@ -1,18 +1,3 @@
-a {
-    color: #34ACA7;
-}
-
-a:hover, button:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.nav_desc {
-    font-size: 10px;
-    line-height: 19px;
-    font-style: italic;
-}
-
 .col {
     display: flex;
     flex-direction: column;
@@ -44,4 +29,8 @@ a:hover, button:hover {
 
 .mb30 {
     margin-bottom: 30px;
+}
+
+.v_border {
+    border: 0.5px solid #e5e5e5;
 }
