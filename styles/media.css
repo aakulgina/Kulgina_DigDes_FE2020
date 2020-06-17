@@ -165,7 +165,7 @@
         width: calc(100vw - 130px)
     }
 
-    .article-data + a {
+    .article-meta {
         font-size: 16px;
     }
 
