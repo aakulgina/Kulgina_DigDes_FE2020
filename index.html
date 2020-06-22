@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Share your food sense</title>
-        <link rel="stylesheet" href="./build/css/site.css" type="text/css" />
-        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./build/css/site.compressed.css" type="text/css" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     </head>
 
     <body class="col align_c">
@@ -14,40 +15,38 @@
             
             <aside class="align_c">
 
-                <div class="logo align_c justify_c">
-                    <a title="Home Page">
-                        <img src="./images/png/food sense.png" alt="Food Sense logo" />
-                    </a>
-                </div>
+                <a class="logo" title="Home Page">
+                    <img src="./images/png/logo.png" alt="Food Sense logo" />
+                </a>
 
                 <ul>
                     <li class="row">
                         <a class="align_c nav" title="Tastemakers">
-                            <img class="nav-icon" src="./images/svg/food-icon.svg" alt="Tastemakers" />                            
+                            <div class="food-icon nav-icon"></div>
                             <span class="nav-label">Tastemakers</span>
                         </a>
                     </li>
                     <li class="row">
                         <a class="align_c nav" title="Blog">
-                            <img class="nav-icon" src="./images/svg/blog-icon.svg" alt="Blog" />                               
+                            <div class="blog-icon nav-icon"></div>
                             <span class="nav-label">Blog</span>
                         </a>
                     </li>
                     <li class="row">
                         <a class="align_c nav" title="The A-List">
-                            <img class="nav-icon" src="./images/svg/a-list-icon.svg" alt="The A-List" />                             
+                            <div class="a-list-icon nav-icon"></div>
                             <span class="nav-label">The A-List</span>
                         </a>
-                        </li>
+                    </li>
                     <li class="row">
                         <a class="align_c nav" title="Contribute">
-                            <img class="nav-icon" src="./images/svg/camera-icon.svg" alt="Contribute" />
+                            <div class="camera-icon nav-icon"></div>
                             <span class="nav-label">Contribute</span>
                         </a>
                     </li>
                     <li class="row">
                         <a class="align_c nav" title="About">
-                            <img class="nav-icon" src="./images/svg/about-icon.svg" alt="About" />        
+                            <div class="about-icon nav-icon"></div>
                             <span class="nav-label">About</span>
                         </a>
                     </li>
@@ -59,7 +58,7 @@
                     </div>
                     
                     <button class="social-button align_c" type="button">
-                        <img src="./images/svg/twitter_aside.svg" alt="Twitter" />
+                        <div class="twitter_a-icon"></div>
                         <span class="ml6">Join the Conversation</span>
                     </button>
 
@@ -67,14 +66,14 @@
                         LET'S BE FRIENDS!
                     </div>
 
-                    <div class="desc desc-nav">
+                    <div class="desc-nav">
                         For weekly finds, community
                         recomendations, and more,
                         like us on Facebook.
                     </div>
 
                     <button class="social-button align_c" type="button">
-                        <img src="./images/svg/twitter_aside.svg" alt="Twitter" />
+                        <div class="twitter_a-icon"></div>
                         <span class="ml6">
                             Join the Community
                         </span>
@@ -98,36 +97,36 @@
                     </div>
                     
                     <div class="row slider">
-                        <div class="slider-tab justify_c col">
-                            <a title="Tastemakers">Tastemakers</a>
+                        <a class="slider-tab justify_c col" title="Tastemakers">
+                            <span>Tastemakers</span>
                             <span class="desc">
                                 Feast your eyes & get reciepes!
                             </span>
-                        </div>
-                        <div class="slider-tab justify_c col">
-                            <a title="Blog">Blog</a>
+                        </a>
+                        <a class="slider-tab justify_c col" title="Blog">
+                            <span>Blog</span>
                             <span class="desc">
                                 News, how-tos, stories, and more
                             </span>
-                        </div>
-                        <div class="slider-tab justify_c col">
-                            <a title="The A-List">The A-List</a>
+                        </a>
+                        <a class="slider-tab justify_c col" title="The A-List">
+                            <span>The A-List</span>
                             <span class="desc">
                                 Handpicked, absolute favourites
                             </span>
-                        </div>
-                        <div class="slider-tab justify_c col is-slider-tab-active">
-                            <a title="Contribute">Contribute</a>
+                        </a>
+                        <a class="slider-tab justify_c col" title="Contribute">
+                            <span>Contribute</span>
                             <span class="desc">
                                 We want to hear from you!
                             </span>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="email justify_c align_c mb30">
                     <div class="row">
-                        <img class="email-icon" src="./images/svg/email.svg" alt="Email Icon" />
+                        <div class="email-icon"></div>
                         <span class="email-news">
                             Sign up for our newsletter to receive a handpicked selection of the best stories,
                             recipes, and news, delivered weekly to your inbox.
@@ -145,9 +144,9 @@
                         <a title="2012's Best Summer Cookbooks">
                             <img class="article-image" src="./images/jpg/best_summer.jpg" alt="2012's Best Summer Cookbooks" />
                         </a>
-                        <a class="article-title" title="2012's Best Summer Cookbooks">
-                            2012's Best Summer Cookbooks
-                        </a>
+                        <span class="article-title">
+                            <a title="2012's Best Summer Cookbooks">2012's Best Summer Cookbooks</a>
+                        </span>
                         <div class="article-margin">
                             With the best of the season
                             coming from "orchards, farms and
@@ -167,9 +166,9 @@
                         <a title="How to Make Vegetable Chips">
                             <img class="article-image" src="./images/jpg/how_to.jpg" alt="How to Make Vegetable Chips" />
                         </a>
-                        <a class="article-title" title="How to Make Vegetable Chips">
-                            How to Make Vegetable Chips
-                        </a>
+                        <span class="article-title">
+                            <a title="How to Make Vegetable Chips">How to Make Vegetable Chips</a>
+                        </span>
                         <div class="article-margin">
                             About a month ago, I ate almost
                             an entire box of kale chips. My
@@ -189,9 +188,9 @@
                         <a title="Join us on Pinterest!">
                             <img class="article-image" src="./images/jpg/pinterest.jpg" alt="Join us on Pinterest!" />
                         </a>
-                        <a class="article-title" title="Join us on Pinterest!">
-                            Join us on Pinterest!
-                        </a>
+                        <span class="article-title">
+                            <a title="Join us on Pinterest!">Join us on Pinterest!</a>
+                        </span>
                         <div class="article-margin">
                             If I could curate a cookbook for
                             you, this would be it.
@@ -208,9 +207,9 @@
                         <a title="Recipes from a Sunday Supper">
                             <img class="article-image" src="./images/jpg/recipes.jpg" alt="Recipes from a Sunday Supper" />
                         </a>
-                        <a class="article-title" title="Recipes from a Sunday Supper">
-                            Recipes from a Sunday Supper
-                        </a>
+                        <span class="article-title">
+                            <a title="Recipes from a Sunday Supper">Recipes from a Sunday Supper</a>
+                        </span>
                         <div class="article-margin">
                             I could not figure out what to do
                             with the delectable slices of Pear
@@ -234,26 +233,30 @@
         
         <footer class="row justify_b align_c">
 
-            <div class="col">
-                <div class="justify_b">
+            <div class="col legacy">
+                <div class="justify_b contacts">
+                    <div>
                         <a title="Privacy Policy">Privacy Policy</a>
-                        <div class="v_border"></div>
+                    </div>
+                    <div>
                         <a title="Terms of Use">Terms of Use</a>
-                        <div class="v_border"></div>
+                    </div>
+                    <div>
                         <a title="Contact">Contact</a>
+                    </div>
                 </div>
                 <span>© 2016 Food Sense, all rights reserved.</span>
             </div>
-            <div class="row">
-                    <a class="icon-link" title="Twitter">
-                        <object data="./images/svg/twitter_footer.svg">Twitter</object>
-                    </a>
-                    <a class="icon-link" title="Facebook">
-                        <object data="images/svg/facebook.svg">Facebook</object>                            
-                    </a>
-                    <a class="icon-link" title="RSS">
-                        <object data="images/svg/rss.svg">RSS</object>                            
-                    </a>
+            <div class="row icons">
+                <a title="Twitter">
+                    <div class="twitter_f-icon"></div>
+                </a>
+                <a title="Facebook">
+                    <div class="facebook-icon"></div>                            
+                </a>
+                <a title="RSS">
+                    <div class="rss-icon"></div>                            
+                </a>
             </div>
 
         </footer>
