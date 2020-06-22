@@ -1,13 +1,20 @@
 var gulp = require('gulp'),
-	browserSync = require('browser-sync').create(),
-	concatCss = require('gulp-concat-css');
+	rename = require('gulp-rename'),
+	sourcemaps = require('gulp-sourcemaps'),
+	sass = require('gulp-sass'),
+	svgSprite = require('gulp-svg-sprite'),
+	browserSync = require('browser-sync').create();
 
+sass.compiler = require('node-sass');
 
 function css_style(done) {
-	gulp.src('styles/site.css')
-		.pipe(concatCss("site.css"))
+	gulp.src('styles/**/*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+		.pipe(rename({suffix: ".compressed"}))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('build/css'))
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream());
 	done();
 }
 
@@ -24,9 +31,28 @@ function browserReload(done) {
 	browserSync.reload()
 }
 
-function watchFile() {
-	gulp.watch('styles/**/*.css', css_style);
-	gulp.watch('./**/*.html', browserReload);
+config = {
+    mode: {
+      css: { // Activate the «css» mode
+		bust: false,
+		render: {
+          scss: true // Activate SCSS output (with default options)
+        }
+      }
+    }
+};
+
+function svgs() {
+	return gulp.src('images/svg/**/*.svg')
+  		.pipe(svgSprite(config))
+		.pipe(gulp.dest('build/'))
+		.pipe(browserSync.stream());
 }
 
-gulp.task('default', gulp.parallel(sync, css_style, watchFile))
+function watchFile() {
+	gulp.watch(['styles/**/*.scss', 'build/css/sprite.scss'], css_style);
+	gulp.watch('./**/*.html', browserReload);
+	gulp.watch('images/svg/**/*.svg', svgs);
+}
+
+gulp.task('default', gulp.series(gulp.series(svgs, css_style), gulp.parallel(sync, watchFile)))
