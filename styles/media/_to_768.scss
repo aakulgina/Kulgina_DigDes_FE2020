@@ -1,0 +1,41 @@
+@media all and (max-width: 768px) {
+    .slider, .nav-icon {
+        display: none;
+    }
+    
+    footer {
+        height: 78px;
+    }
+
+    .email {
+        flex-direction: column;
+        justify-content: space-between;
+
+        .row:first-child {
+            margin-right: 0px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .banner {
+        &-caption {
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        &-header {
+            @include font-size-line(20px, 20px);
+            opacity: 0.6;
+            justify-content: flex-start;
+        }
+
+        &-text {
+            @include font-size-line(12px, 12px);
+            justify-content: flex-start;
+        }
+    }
+
+    aside ul {
+        justify-content: space-between;
+    }
+}

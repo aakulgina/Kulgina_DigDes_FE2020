@@ -1,0 +1,40 @@
+aside {
+    font-family: $secondary-font;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 896px;
+}
+
+.l-content {
+    min-height: calc(100vh - 186px);
+    width: 1088px;
+}
+
+.l-articles {
+    flex-wrap: wrap;
+}
+
+footer {
+    @include border(-top, 2px, solid, "+");
+    height: 92px;
+    width: 1088px;
+    @include font-size-line(12px, 12px);
+    letter-spacing: -0.02em;
+    color: #e5e5e5;
+
+    .icons a:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    .contacts div:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        height: 12px;
+        width: 1px;
+        background-color:#e5e5e5;
+        margin-left: 5px;
+    }
+}

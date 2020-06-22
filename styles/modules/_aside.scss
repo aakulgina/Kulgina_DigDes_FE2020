@@ -1,0 +1,31 @@
+.desc-nav {
+    @extend .desc; // Данный класс описан в фрагменте _banner.scss
+    margin-top: 10px;
+}
+
+.nav-label {
+    margin-left: 12px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.social-button {
+    @include font-size-line(10px, 12px);
+    min-height: 30px;
+    color: #34ACA7;
+    border-radius: 5px;
+    @include border("", 1px, solid, "+");
+    background-color: white;
+    width: 140px;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+.social-community {
+    @include border(-bottom, 1px, dashed, "+");
+    @include font-size-line(12px, 12px);
+    padding: 5px 0px;
+}

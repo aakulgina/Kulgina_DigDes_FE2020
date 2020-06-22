@@ -1,0 +1,7 @@
+@each $name in food, blog, a-list, camera, about, twitter_a, email, facebook, twitter_f, rss {
+    @if $name == facebook or $name == twitter_f or $name == rss {
+        @include icon($name, "h")
+        } @else {
+        @include icon($name, "")
+    }
+}

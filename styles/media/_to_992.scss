@@ -1,0 +1,27 @@
+@media all and (max-width: 992px) {
+    .social {
+        display: none;
+    }
+
+    .l-content {
+        flex-direction: column;
+    }
+
+    aside {
+        flex-direction: row;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .nav-label {
+        margin-left: 0px;
+    }
+
+    body {
+        margin-top: 0px;
+    }
+}

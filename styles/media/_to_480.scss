@@ -1,0 +1,72 @@
+@media all and (max-width: 480px) {
+    aside ul, footer {
+        width: 92%;
+    }
+
+    main, .l-content, .banner, .article-image {
+        width: 100%;
+    }
+
+    .banner {
+        height: calc(100vw - 100px);
+
+        &-header {
+            width: calc(100vw - 30px);
+        }
+        
+        &-text {
+            width: calc(100vw - 20px);
+            padding-left: 5px;
+        }
+    }
+
+    .email {
+        padding: 15px;
+    }
+
+    .l-articles {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .article {
+        @include font-size-line(18px, 20px);
+        width: calc(100vw - 130px);
+
+        &-meta {
+            font-size: 16px;
+        }
+
+        &-title {
+            @include font-size-line(22px, 21px);
+        }
+    }
+
+    aside {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        height: 200px;
+    }
+
+    form, input {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .legacy {
+        width: 50%;
+        margin: 5px 0px;
+        .contacts {
+            flex-direction: column;
+            
+            & div {
+                margin-bottom: 5px;
+            
+                &:not(:last-child)::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

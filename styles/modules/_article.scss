@@ -1,0 +1,23 @@
+.article {
+    width: 207px;
+    margin-bottom: 14px;
+
+    & a, &-margin {
+        margin-bottom: 11px;
+    }
+
+    &-image {
+        @include border("", 2px, solid, "+");
+        width: 207px;
+    }
+
+    &-title {
+        @include font-size-line(16px, 21px);
+        letter-spacing: -0.02em;
+        margin-bottom: 9px;
+    }
+
+    &-meta {
+        color: #e5e5e5;
+    }
+}

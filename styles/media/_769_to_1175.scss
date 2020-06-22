@@ -1,0 +1,28 @@
+@media all and (min-width: 769px) and (max-width: 1176px) {
+    main {
+        width: 712px;
+    }
+    
+    .slider-tab {
+        width: 177.5px;
+        @include font-size-line(14px, 14px);
+        align-items: center;
+        padding: 10px;
+    }
+
+    .email {
+        padding: 10px 9px;
+
+        &-news {
+            width: 363px;
+        }
+    }
+
+    .article, .article-image {
+        width: 159px;
+    }
+
+    .article-image {
+        height: 113px;
+    }
+}

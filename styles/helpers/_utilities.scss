@@ -1,0 +1,26 @@
+@each $class, $dir in (col, column), (row, row) {
+    .#{$class} {
+        display: flex;
+        flex-direction: $dir;
+    }
+}
+
+@each $label, $type in (_c, center), (_b, space-between) {
+    .justify#{$label} {
+        display: flex;
+        justify-content: $type;
+    }
+}
+
+.align_c {
+    display: flex;
+    align-items: center;
+}
+
+.ml6 {
+    margin-left: 6px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}

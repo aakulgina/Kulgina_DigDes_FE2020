@@ -1,0 +1,32 @@
+.email {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 18px;
+    @each $type, $box in (-top, "+"), (-bottom, "") {
+        @include border($type, 1px, dashed, $box)        
+    }
+
+    .row:first-child {
+        margin-right: 24px;
+    }
+
+    &-news {
+        line-height: 16px;
+        margin-left: 16px;
+        letter-spacing: 0;
+        font-style: italic;
+    }
+
+    &-button {
+        width: 80px;
+        height: 23px;
+        background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+        border-radius: 2px;
+        @include font-size-line(10px, 10px);
+        margin-left: 18px;
+    }
+
+    &-icon {
+        min-width: 32px;
+    }
+}
