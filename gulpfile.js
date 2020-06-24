@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	sass = require('gulp-sass'),
 	svgSprite = require('gulp-svg-sprite'),
+	postcss = require('gulp-postcss'),
 	browserSync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
@@ -12,6 +13,7 @@ function css_style(done) {
 		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
 		.pipe(rename({suffix: ".compressed"}))
+		.pipe(postcss())
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('build/css'))
 		.pipe(browserSync.stream());
@@ -50,7 +52,7 @@ function svgs() {
 }
 
 function watchFile() {
-	gulp.watch(['styles/**/*.scss', 'build/css/sprite.scss'], css_style);
+	gulp.watch(['styles/**/*.scss', 'build/css/sprite.scss', '.postcssrc.json'], css_style);
 	gulp.watch('./**/*.html', browserReload);
 	gulp.watch('images/svg/**/*.svg', svgs);
 }
