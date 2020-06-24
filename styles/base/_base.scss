@@ -29,6 +29,5 @@ input {
     height: 22px;
     padding: 6px;
 
-    &::-webkit-input-placeholder { color: #e5e5e5; }
-    &::-moz-placeholder { color: #e5e5e5; }
+    &::placeholder { color: #e5e5e5; }
 }
