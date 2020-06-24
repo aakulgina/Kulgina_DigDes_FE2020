@@ -1,5 +1,7 @@
 {
     "plugins": {
-        "autoprefixer": {}
+        "autoprefixer": {},
+        "postcss-preset-env": {},
+        "css-declaration-sorter": { "order": "smacss" }
     }
 }
