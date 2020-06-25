@@ -33,7 +33,6 @@
     "postcss-preset-env": "^6.7.0"
   },
   "browserslist": [
-    "last 2 version",
-    "ie 11"
+    "last 2 version"
   ]
 }
