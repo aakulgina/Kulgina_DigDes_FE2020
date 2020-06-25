@@ -10,12 +10,11 @@
     .banner {
         height: calc(100vw - 100px);
 
-        &-header {
-            width: calc(100vw - 30px);
+        &-header, &-text {
+            width: auto;
         }
         
         &-text {
-            width: calc(100vw - 20px);
             padding-left: 5px;
         }
     }
@@ -27,6 +26,7 @@
     .l-articles {
         flex-direction: column;
         align-content: center;
+        -ms-flex-align: center;
     }
 
     .article {
@@ -60,12 +60,12 @@
         .contacts {
             flex-direction: column;
             
-            & div {
+            & a {
                 margin-bottom: 5px;
-            
-                &:not(:last-child)::after {
-                    display: none;
-                }
+            }
+
+            .v_border {
+                display: none;
             }
         }
     }

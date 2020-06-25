@@ -24,3 +24,7 @@
 .mb30 {
     margin-bottom: 30px;
 }
+
+.v_border {
+    @include border('', 0.5px, solid, '');
+}
