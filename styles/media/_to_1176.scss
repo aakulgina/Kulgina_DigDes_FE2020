@@ -26,3 +26,25 @@
         height: 113px;
     }
 }
+
+@media all and (min-width: 993px) {
+    aside {
+        width: 140px;
+
+        li {
+            padding-bottom: 31px;
+        }
+    }
+}
+
+@media all and (min-width: 993px) and (max-width: 1176px) {
+    footer, .l-content {
+        width: 896px;
+    }
+}
+
+@media all and (max-width: 1176px) {
+    main .desc {
+        display: none;
+    }
+}

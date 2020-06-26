@@ -9,10 +9,6 @@
 
     .banner {
         height: calc(100vw - 100px);
-
-        &-header, &-text {
-            width: auto;
-        }
         
         &-text {
             padding-left: 5px;

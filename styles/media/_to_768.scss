@@ -2,18 +2,15 @@
     .slider, .nav-icon {
         display: none;
     }
-    
-    footer {
-        height: 78px;
-    }
 
     .email {
         flex-direction: column;
-        justify-content: space-between;
 
         .row:first-child {
             margin-right: 0px;
             padding-bottom: 20px;
+        }
+        .row:not(form) {
             width: 100%;
         }
     }
@@ -24,19 +21,63 @@
             width: 100%;
         }
 
+        &-header, &-text {
+            width: auto;
+            justify-content: flex-start;
+        }
+
         &-header {
             @include font-size-line(20px, 20px);
             opacity: 0.6;
-            justify-content: flex-start;
         }
 
         &-text {
             @include font-size-line(12px, 12px);
-            justify-content: flex-start;
         }
     }
 
     aside ul {
         justify-content: space-between;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    .l-content, main, footer {
+        width: 440px;
+    }
+
+    .email {
+        padding: 15px 0px;
+
+        &-news, &-button {
+            margin: 0px 5px 0px 14px;
+        }
+
+        &-icon {
+            margin-left: 5px;
+        }
+    }
+
+    input {
+        width: 332px;
+        margin-left: 7px;
+    }
+
+    .banner {
+        height: 331px;
+    }
+
+    .logo, .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    aside {
+        height: 110px;
+        justify-content: space-between;
+
+        ul {
+            width: 350px;
+        }
     }
 }
