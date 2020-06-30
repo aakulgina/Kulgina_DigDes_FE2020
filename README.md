@@ -12,3 +12,5 @@
         <li>Не использовать JavaScript</li>
     </ol>
 </p>
+<p>В репозитории также имеется ветка с <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Webpack_edition">Webpack Edition</a>.
+</p>
