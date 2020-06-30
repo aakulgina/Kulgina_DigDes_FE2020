@@ -1,5 +1,5 @@
-{
-    "plugins": {
+module.exports = {
+    plugins: {
         "postcss-merge-rules": {},
         "autoprefixer": {},
         "postcss-preset-env": {},
