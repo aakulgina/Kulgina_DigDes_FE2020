@@ -17,13 +17,22 @@
 
 @mixin icon($name, $hover) {
     .#{$name}-icon {
-        @extend .svg-#{$name}-icon;
-        @extend .svg-#{$name}-icon-dims;
-
+        background: url(/images/svg/#{$name}-icon.svg) no-repeat;
+        background-position: center;
+        @if $name == twitter_a {
+            width: 16px;
+            height: 14px;
+        } @else {
+            height: 33px;
+            @if $name == facebook {
+                width: 17px;
+            } @else {
+                width: 33px;
+            }
+        }
         @if $hover == "h" {
             &:hover {
-                @extend .svg-#{$name}_hover-icon;
-                @extend .svg-#{$name}_hover-icon-dims;
+                background-image: url(/images/svg/#{$name}_hover-icon.svg);
             }
         }
     }
