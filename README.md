@@ -18,7 +18,9 @@
             <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_4_SCSS">Задание 1.4. SCSS</a>
         </li>
         <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Cross-browser_compatibility">Задание 1.5. Cross-browser compatibility</a>
+            Задание 1.5. Cross-browser compatibility (задание выполнено в двух вариантах:
+            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Cross-browser_compatibility">Gulp edition</a>
+            и <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Webpack_edition">Webpack edition</a>).
         </li>
     </ul>
 </p>
