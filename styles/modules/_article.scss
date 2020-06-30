@@ -9,6 +9,7 @@
     &-image {
         @include border("", 2px, solid, "+");
         width: 207px;
+        display: block;
     }
 
     &-title {
