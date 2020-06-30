@@ -25,7 +25,10 @@ footer {
     letter-spacing: -0.02em;
     color: #e5e5e5;
 
-    .icons a:not(:last-child) {
-        margin-right: 12px;
+    .icons a {
+        height: fit-content;
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
     }
 }

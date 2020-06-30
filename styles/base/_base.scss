@@ -10,13 +10,27 @@ a {
 }
 
 a:hover, button:hover {
-    text-decoration: underline;
     cursor: pointer;
 }
 
-aside ul {
-    @include font-size-line(14px, 14px);
-    font-style: italic;
+a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    border-color: mediumseagreen;
+}
+
+aside {
+    ul {
+        @include font-size-line(14px, 14px);
+        font-style: italic;
+    }
+    
+    & a.logo, & a.logo img {
+        @include border("", 0px, solid, "");
+        border-radius: 73px;
+    }
 }
 
 form input, form button {
