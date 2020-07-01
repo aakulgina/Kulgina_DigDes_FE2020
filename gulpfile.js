@@ -34,7 +34,12 @@ function browserReload(done) {
 }
 
 config = {
-    mode: {
+	shape: {
+		spacing: {
+			padding: 2
+		},
+	},
+	mode: {
       css: { // Activate the «css» mode
 		bust: false,
 		render: {
