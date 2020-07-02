@@ -1,26 +1,42 @@
 # Школа frontend-разработки Digital Design 2020
 
-<p>В репозитории лежат задания, выполненные в рамках курса frontend-разработки в IT-университете
-российской компании Digital Design.</p>
-<p>Каждому заданию посвящена отдельная ветка, название которой оформлено по шаблону "Task_(номер)_(название)". К каждому заданию прилагается README с описанием используемых технологий и того, что нужно было сделать.</p>
-<p>Выполненные задания:
+<h1>Задание 2.1. React</h1>
+<p>Приложение является некоторым аналогом игры тамагочи, в котором нужно реализовать:
+    <ol>
+        <li>Состояние 4 параметров:
+            <ul>
+                <li>Здоровье (hp)</li>
+                <li>Усталость</li>
+                <li>Голод</li>
+                <li>Жажда</li>
+            </ul>
+        </li>
+        <li>Контролы управления:
+            <ul>
+                <li>Пить (-10 жажды, -1/+1 hp)</li>
+                <li>Есть (-10 голода, -2/+2 hp)</li>
+                <li>Играть/работать (+30-40 жажды, +10-20 голода)</li>
+                <li>Заняться спортом (+1-10 hp, -x% голода/жажды)</li>
+            </ul>
+        </li>
+    </ol>
+</p>
+<p>Расширенные требования:
     <ul>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_1_FlexBox">Задание 1.1. Flexbox</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_2_Responsive">Задание 1.2. Responsive</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_3_Project">Задание 1.3. Project</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_4_SCSS">Задание 1.4. SCSS</a>
-        </li>
-        <li>
-            Задание 1.5. Cross-browser compatibility (задание выполнено в двух вариантах:
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Cross-browser_compatibility">Gulp edition</a>
-            и <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Webpack_edition">Webpack edition</a>).
-        </li>
+        <li>Пользовательские (через поле ввода) команды для влияния на состояние, с возможностью выполнения нескольких действий.</li>
+        <li>Сделать список (для каждого действия) и вывод действий по нажатию на контролы (пример: нажали контрол "Есть" -- выводится как "Вы съели яблоко").</li>
+        <li>Сделать отдельную страницу для заполнения истории действий.</li>
     </ul>
+</p>
+<p>Макеты: https://www.figma.com/file/HkAHjhqHb3iKeYSTbZNy92/dd_fe_school_vue_advanced?
+node-id=0%3A1</p>
+<p>Технологии:
+    <ul>
+        <li>React / Create-react-app / ES6+ / SCSS</li>
+    </ul>
+</p>
+<p>Ограничения:
+    <ol>
+        <li>Разделить компоненты отображения параметров и контролов в разные компоненты.</li>
+    </ol>
 </p>
