@@ -28,8 +28,7 @@
         <li>Сделать отдельную страницу для заполнения истории действий.</li>
     </ul>
 </p>
-<p>Макеты: https://www.figma.com/file/HkAHjhqHb3iKeYSTbZNy92/dd_fe_school_vue_advanced?
-node-id=0%3A1</p>
+<p>Макеты: https://www.figma.com/file/HkAHjhqHb3iKeYSTbZNy92/dd_fe_school_vue_advanced?node-id=0%3A1</p>
 <p>Технологии:
     <ul>
         <li>React / Create-react-app / ES6+ / SCSS</li>
