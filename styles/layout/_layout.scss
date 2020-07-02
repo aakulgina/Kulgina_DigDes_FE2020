@@ -31,4 +31,17 @@ footer {
             margin-right: 12px;
         }
     }
+
+    .contacts div:not(:last-child) {
+        display: -ms-inline-flexbox;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 1px;
+            background-color:#e5e5e5;
+            margin-left: 5px;
+        }
+    }
 }

@@ -56,12 +56,12 @@
         .contacts {
             flex-direction: column;
             
-            & a {
+            & div {
                 margin-bottom: 5px;
-            }
-
-            .v_border {
-                display: none;
+            
+                &:not(:last-child)::after {
+                    display: none;
+                }
             }
         }
     }
