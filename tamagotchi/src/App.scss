@@ -27,3 +27,17 @@
     height: 295px;
   }
 }
+
+.stats, .controls {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
+  width: fit-content;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
