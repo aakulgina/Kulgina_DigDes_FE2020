@@ -22,8 +22,8 @@ function Button (props) {
         changes = [random(-40, -30), random(-20, -10), random(-30, -20), random(15, 25)]
     } else if (props.class==="sport") {
         type = ['health', 'hunger', 'thirst', 'fatigue']
-        changes = [random(-10, -1), -1*Math.floor(props.values[1]*0.1),
-                -1*Math.ceil(props.values[2]*0.08), random(-15, -10)]
+        changes = [random(-10, -1), -1*Math.floor(props.values[1]*0.2+random(10, 20)),
+                -1*Math.ceil(props.values[2]*0.3+random(10, 25)), random(-15, -10)]
     }
 
     return (
