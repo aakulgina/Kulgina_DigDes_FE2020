@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './media.scss';
 import Button from './components/controls/Button.jsx'
 import Stat from './components/stats/stats.jsx'
 import Input from './components/input/input.jsx'

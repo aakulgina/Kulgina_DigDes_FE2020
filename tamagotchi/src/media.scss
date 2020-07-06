@@ -1,0 +1,23 @@
+@media all and (min-width: 769px) and (max-width: 900px) {
+    .game-field {
+        width: calc(100vw - 90px);
+    }
+}
+
+@media all and (max-width: 768px) {
+    .game-field {
+        width: calc(100vw - 60px);
+
+        & > :first-child, .wrapper > :first-child {
+            margin-bottom: 20px;
+          }
+
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+
+    .stats, .controls {
+        max-width: 95%;
+    }
+}
