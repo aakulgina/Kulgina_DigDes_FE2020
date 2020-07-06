@@ -13,17 +13,17 @@ function Button (props) {
 
     if (props.class==="eat") {
         type = ['hunger', 'health', 'fatigue']
-        changes = [10, random(-2, 2), random(5, 10)]
+        changes = [10, random(-2, 2), random(2, 6)]
     } else if (props.class==="drink") {
         type = ['thirst', 'health', 'fatigue']
-        changes = [10, random(-1, 1), random(10, 15)]
+        changes = [10, random(-1, 1), random(1, 5)]
     } else if (props.class==="work") {
         type = ['thirst', 'hunger', 'fatigue', 'health']
-        changes = [random(-40, -30), random(-20, -10), random(-35, -25), random(15, 25)]
+        changes = [random(-40, -30), random(-20, -10), random(-30, -20), random(15, 25)]
     } else if (props.class==="sport") {
         type = ['health', 'hunger', 'thirst', 'fatigue']
         changes = [random(-10, -1), -1*Math.floor(props.values[1]*0.1),
-                -1*Math.ceil(props.values[2]*0.08), random(-25, -20)]
+                -1*Math.ceil(props.values[2]*0.08), random(-15, -10)]
     }
 
     return (
