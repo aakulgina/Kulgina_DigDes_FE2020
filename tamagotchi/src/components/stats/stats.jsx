@@ -1,8 +1,14 @@
 import React from 'react';
+import './stats.scss';
 
 function Stat(props) {
     return (
-        <span style={{width: 340+'px'}}>{props.stat}: {props.value}</span>
+        <div className="stat">
+            <span className="stat-title">{props.stat}:</span>
+            <div className="stat_value-wrapper">
+                <div className={props.class} style={{ width: props.value + "%" }}></div>
+            </div>
+        </div>
     )
 }
 
