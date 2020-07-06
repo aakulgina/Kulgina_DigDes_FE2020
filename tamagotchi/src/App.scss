@@ -1,10 +1,5 @@
-.App {
-  display: flex;
-  justify-content: center;
-}
-
 .game {
-  margin: 50px 0px;
+  margin-top: 50px;
 
   &-title {
     font-size: 32px;
@@ -22,9 +17,7 @@
     width: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 30px;
-    height: 295px;
   }
 }
 
@@ -33,11 +26,14 @@
   flex-direction: column;
   padding: 20px;
   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
-  width: fit-content;
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  &:first-child {
+    margin-bottom: 40px;
+  }
 }
