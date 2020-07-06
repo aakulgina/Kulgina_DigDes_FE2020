@@ -1,12 +1,13 @@
 @mixin control($color, $shadow) {
     background-color: $color;
-    box-shadow: $shadow;
+    box-shadow: 0px 0px 3px $shadow;
 }
 
 button {
     width: 340px;
-    height: 31px;
+    padding: 8px 0px;
     color: #ffffff;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -21,17 +22,17 @@ button {
 }
 
 .eat {
-    @include control(#E74C3C, 0px 0px 3px rgba(231, 76, 60, 0.5));
+    @include control(#E74C3C, rgba(231, 76, 60, 0.5));
 }
 
 .drink {
-    @include control(#3498DB, 0px 0px 3px rgba(52, 152, 219, 0.5));
+    @include control(#3498DB, rgba(52, 152, 219, 0.5));
 }
 
 .sport {
-    @include control(#E67E22, 0px 0px 3px rgba(230, 126, 34, 0.5));
+    @include control(#E67E22, rgba(230, 126, 34, 0.5));
 }
 
 .work {
-    @include control(#95A5A6, 0px 0px 3px rgba(149, 165, 166, 0.5));
+    @include control(#95A5A6, rgba(149, 165, 166, 0.5));
 }
