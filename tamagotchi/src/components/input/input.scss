@@ -1,13 +1,11 @@
+@import '../../mixins';
+
 textarea {
+    @include font(14px, 16px);
     height: 40px;
     border: none;
     box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
     padding: 10px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
     resize: none;
 
     &::placeholder {

@@ -1,0 +1,28 @@
+@import './variables';
+
+@mixin stat($color) {
+    height: 8px;
+    background-color: $color;
+}
+
+@mixin control($color, $shadow) {
+    background-color: $color;
+    box-shadow: 0px 0px 3px $shadow;
+}
+
+  
+@mixin font($size, $line) {
+    font-family: $main-font;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin flex-dir($dir) {
+    display: flex;
+    flex-direction: $dir;
+}
+
+@mixin justify($type) {
+    display: flex;
+    justify-content: $type;
+}

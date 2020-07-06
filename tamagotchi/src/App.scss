@@ -1,40 +1,35 @@
+@import './mixins';
+
 .game {
   margin: 50px 0px;
 
   &-title {
-    font-size: 32px;
-    line-height: 37px;
-    font-style: normal;
+    @include font(32px, 37px);
+    @include justify(center);
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-
   }
 
   &-field {
+    @include flex-dir(column);
     margin-top: 50px;
     background-color: #ffffff;
     width: 800px;
-    display: flex;
-    flex-direction: column;
     padding: 30px;
 
     & > :first-child {
       margin-bottom: 40px;
     }
+
+    .wrapper {
+      @include flex-dir(row);
+      justify-content: space-between;
+    }
+
+    .stats, .controls {
+      @include flex-dir(column);
+      padding: 20px;
+      box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
+      min-width: 42%;
+    }
   }
-}
-
-.stats, .controls {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
-  min-width: 42%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }

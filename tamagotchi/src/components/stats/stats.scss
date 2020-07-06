@@ -1,6 +1,7 @@
+@import '../../mixins';
+
 .stat {
-    display: flex;
-    flex-direction: column;
+    @include flex-dir(column);
 
     &:not(:last-child) {
         margin-bottom: 10px;
@@ -15,22 +16,9 @@
     }
 }
 
-.health {
-    height: 8px;
-    background-color: #E74C3C;
-}
-
-.thirst {
-    height: 8px;
-    background-color: #3498DB;
-}
-
-.hunger {
-    height: 8px;
-    background-color: #E67E22;
-}
-
-.fatigue {
-    height: 8px;
-    background-color: #95A5A6;
+@each $class, $color in (health, #E74C3C), (thirst, #3498DB),
+                        (hunger, #E67E22), (fatigue, #95A5A6) {
+    .#{$class} {
+        @include stat($color)
+    } 
 }
