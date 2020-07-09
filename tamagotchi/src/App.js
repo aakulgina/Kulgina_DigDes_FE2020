@@ -4,6 +4,8 @@ import './media.scss';
 import Button from './components/controls/Button.jsx'
 import Stat from './components/stats/stats.jsx'
 import Input from './components/input/input.jsx'
+import config from './components/config'
+import valueConfig from './components/valueConfig'
 
 class App extends React.Component {
 
@@ -12,6 +14,17 @@ class App extends React.Component {
     thirst: 50,
     hunger: 50,
     fatigue: 50
+  }
+
+  handleInput = (commands) => {
+    if (commands !== '') {
+      commands = commands.toLowerCase().replace(',', '').split(' ')
+        for (let k = 0; k < commands.length; k++) {
+          var {values} = valueConfig(commands[k], this.state)
+          var {type, changes} = config(commands[k], values)
+          this.updateData(type, values, changes)
+      }
+    }
   }
 
   updateData = (type, value, change) => {
@@ -48,27 +61,27 @@ class App extends React.Component {
             </div>
             <div className="controls">
               <Button class="eat" text="ЕСТЬ"
-                      values={ [hunger, health, fatigue] }
+                      {...valueConfig('есть', this.state)}
                       updateData={this.updateData}
               />
               <Button class="drink" text="ПИТЬ"
-                      values={ [thirst, health, fatigue] }
+                      {...valueConfig('пить', this.state)}
                       updateData={this.updateData}
               />
               <Button class="sport" text="ЗАНЯТЬСЯ СПОРТОМ"
-                      values={ [health, hunger, thirst, fatigue] }
+                      {...valueConfig('заняться', this.state)}
                       updateData={this.updateData}
               />
               <Button class="work" text="РАБОТАТЬ"
-                      values={ [thirst, hunger, fatigue, health] }
+                      {...valueConfig('работать', this.state)}
                       updateData={this.updateData}
               />
             </div>
           </div>
-          <Input />
+          <Input handle={this.handleInput} />
         </div>
       </div>
-    );
+    )
   }
 }
 
