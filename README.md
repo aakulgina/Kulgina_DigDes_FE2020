@@ -22,5 +22,8 @@
             <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Cross-browser_compatibility">Gulp edition</a>
             и <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Webpack_edition">Webpack edition</a>).
         </li>
+        <li>
+            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_2_1_React">Задание 2.1. React JS</a>
+        </li>
     </ul>
 </p>
