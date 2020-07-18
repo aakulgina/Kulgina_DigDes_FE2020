@@ -1,16 +1,11 @@
-import React from 'react';
-import './button.scss';
-import config from '../config'
+import React from 'react'
 
 function Button (props) {
 
-    var {type, changes} = config(props.class, props.values)
-
     return (
-        <button className={props.class}
-                type="button"
-                onClick={() => {props.updateData(type, props.values, changes);}}>
-            {props.text}
+        <button className={props.class} type='button'
+                onClick={() => {props.onClick(props.class, props.values)}}>
+            {props.children}
         </button>
     )
 }

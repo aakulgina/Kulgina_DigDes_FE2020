@@ -1,18 +1,6 @@
+@import './styles/reset';
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import './mixins', './variables';
-
-body {
-  background-color: #eeeeee;
-  font-family: $main-font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-#root {
-  @include justify(center)
-}
+@import './styles/mixins', './styles/variables';
+@import './styles/main';
+@import './App.scss';
+@import './styles/media';

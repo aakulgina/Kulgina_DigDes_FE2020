@@ -1,4 +1,4 @@
-@import '../../mixins';
+@import '../../styles/mixins';
 
 .stat {
     @include flex-dir(column);
@@ -19,6 +19,6 @@
 @each $class, $color in (health, #E74C3C), (thirst, #3498DB),
                         (hunger, #E67E22), (fatigue, #95A5A6) {
     .#{$class} {
-        @include stat($color)
-    } 
+        @include stat($color);
+    }
 }
