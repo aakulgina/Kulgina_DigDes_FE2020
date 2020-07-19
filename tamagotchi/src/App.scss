@@ -3,6 +3,14 @@
 .game {
   margin: 50px 0px;
 
+  .nav > a {
+    color: blue;
+  }
+
+  & > :nth-child(2) {
+    margin: 50px 0px 20px 0px;
+  }
+
   &-title {
     @include font(32px, 37px);
     @include justify(center);
@@ -11,12 +19,11 @@
 
   &-field {
     @include flex-dir(column);
-    margin-top: 50px;
     background-color: #ffffff;
     width: 800px;
     padding: 30px;
 
-    & > :first-child {
+    & > :first-child:not(.history) {
       margin-bottom: 40px;
     }
 
@@ -30,27 +37,27 @@
       padding: 20px;
       box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7);
       min-width: 42%;
+    }
 
-      &-final {
-        @include flex-dir(column);
-        align-items: center;
-        justify-content: center;
-        background-color: black;
-        height: 100%;
+    .stats-final {
+      @include flex-dir(column);
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      height: 100%;
 
-        :first-child {
-          padding-bottom: 20px;
-        }
+      :first-child {
+        padding-bottom: 20px;
+      }
 
-        .game-over {
-          color: red;
-          font-size: 22px;
-          font-family: fantasy;
-        }
+      .game-over {
+        color: red;
+        font-size: 22px;
+        font-family: fantasy;
+      }
 
-        .game-reload {
-          color: white;
-        }
+      .game-reload {
+        color: white;
       }
     }
   }

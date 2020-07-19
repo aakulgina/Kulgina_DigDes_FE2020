@@ -5,12 +5,24 @@
 }
 
 @media all and (max-width: 768px) {
+    .game > :nth-child(2) {
+        margin: 50px 0px 20px 15px;
+    }
+    
     .game-field {
         width: calc(100vw - 60px);
 
-        & > :first-child, .wrapper > :first-child {
+        & > :first-child:not(.history), .wrapper > :first-child {
             margin-bottom: 20px;
-          }
+        }
+
+        h1 {
+            justify-self: center;
+        }
+
+        .history {
+            height: 495px;
+        }
 
         .wrapper {
             flex-direction: column;
@@ -19,5 +31,9 @@
 
     .stats, .controls {
         max-width: 95%;
+    }
+
+    .stats-final {
+        padding: 15px;
     }
 }

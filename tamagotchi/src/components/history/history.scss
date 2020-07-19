@@ -1,0 +1,7 @@
+@import '../..//styles/mixins';
+
+.history {
+    height: 301px;
+    overflow-y: scroll;
+    @include font(20px, 1.4)
+  }

@@ -3,7 +3,8 @@ import React from 'react'
 function Input(props) {
 
     return (
-        <textarea
+        props.active === 'true' ? (
+            <textarea
             type='text' wrap='soft' placeholder='Insert your command...'
             onKeyUp={({ target, key }) =>  {
                 if (key === 'Enter') {
@@ -12,6 +13,12 @@ function Input(props) {
                 }
             }}
         />
+        ) : (
+            <textarea
+            type='text' wrap='soft' placeholder='Insert your command...'
+            disabled={true}
+        />
+        )
     )
 }
 
