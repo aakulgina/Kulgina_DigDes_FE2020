@@ -5,7 +5,7 @@ function Button (props) {
     return (
         props.active === 'true' ? (
             <button className={props.class} type='button'
-                    onClick={() => {props.onClick(props.class, props.values, props.log)}}>
+                    onClick={() => {props.onClick(props.class, props.values, props.log, props.out)}}>
                 {props.children}
             </button>
         ) : (

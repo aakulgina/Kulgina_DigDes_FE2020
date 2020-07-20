@@ -23,8 +23,13 @@
     width: 800px;
     padding: 30px;
 
-    & > :first-child:not(.history) {
+    & > :first-child:not(.history):not(.action),
+    & > :nth-child(2):not(:last-child) {
       margin-bottom: 40px;
+    }
+
+    & > :first-child.action {
+      margin-bottom: 15px;
     }
 
     .wrapper {
@@ -44,7 +49,6 @@
       align-items: center;
       justify-content: center;
       background-color: black;
-      height: 100%;
 
       :first-child {
         padding-bottom: 20px;
