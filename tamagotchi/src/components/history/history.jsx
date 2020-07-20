@@ -3,7 +3,10 @@ import React from 'react'
 function History(props) {
     var log = props.log.split('_')
     return (
-        <div>{props.id}) {log[0]}<br/>{log[1]}</div>
+        <React.Fragment>
+            <span>{props.id}) {log[0]}</span>
+            <span>{log[1]}</span>
+        </React.Fragment>
     )
 }
 
