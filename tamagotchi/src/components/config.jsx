@@ -1,9 +1,9 @@
+const random = (min, max) => {
+    const randInt = min + Math.random() * (max + 1 - min)
+    return Math.floor(randInt)
+}
+
 function config (command, values) {
-    
-    const random = (min, max) => {
-        const randInt = min + Math.random() * (max + 1 - min)
-        return Math.floor(randInt)
-    }
 
     var type = []
     var changes = []
@@ -36,4 +36,4 @@ function config (command, values) {
     return {type, changes}
 }
 
-export default config
+export {config, random}
