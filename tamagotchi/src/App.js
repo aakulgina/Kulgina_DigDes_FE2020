@@ -24,7 +24,7 @@ class App extends React.Component {
   handleInput = (commands) => {
     if (commands !== '') {
       this.setState({out: ''})
-      commands = commands.toLowerCase().split(', ')
+      commands = commands.toLowerCase().replace(',', '').split(' ')
         for (let k = 0; k < commands.length; k++) {
           var {values, log} = valueConfig(commands[k], this.state)
           var {type, changes} = config(commands[k], values)
