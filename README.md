@@ -25,5 +25,8 @@
         <li>
             <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_2_1_React">Задание 2.1. React JS</a>
         </li>
+        <li>
+            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_3_Chat">Задание 3. Chat</a>
+        </li>
     </ul>
 </p>
