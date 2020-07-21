@@ -1,29 +1,35 @@
 # Школа frontend-разработки Digital Design 2020
 
-<p>В репозитории лежат задания, выполненные в рамках курса frontend-разработки в IT-университете
-российской компании Digital Design.</p>
-<p>Каждому заданию посвящена отдельная ветка, название которой оформлено по шаблону "Task_(номер)_(название)". К каждому заданию прилагается README с описанием используемых технологий и того, что нужно было сделать.</p>
-<p>Выполненные задания:
-    <ul>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_1_FlexBox">Задание 1.1. Flexbox</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_2_Responsive">Задание 1.2. Responsive</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_3_Project">Задание 1.3. Project</a>
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_4_SCSS">Задание 1.4. SCSS</a>
-        </li>
-        <li>
-            Задание 1.5. Cross-browser compatibility (задание выполнено в двух вариантах:
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Cross-browser_compatibility">Gulp edition</a>
-            и <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_1_5_Webpack_edition">Webpack edition</a>).
-        </li>
-        <li>
-            <a href="https://github.com/aakulgina/Kulgina_DigDes_FE2020/tree/Task_2_1_React">Задание 2.1. React JS</a>
-        </li>
-    </ul>
+<h1>Задание 3. Chat</h1>
+
+<p>Приложение является финальным заданием, в котором необходимо агрегировать все полученные ранее знания.
 </p>
+<p>
+    <h3>Слой отображения:</h3>
+    <p>
+        Необходимо реализовать чат (слева панель навигации и комнат, центр чат, справа профиль пользователя). Добавить роутинг для возможности перехода по каналам (использовать react-router v4).<br>
+        Макеты: https://www.figma.com/file/fw7vBXDJdwgic01Nd9sAcg/Task3---Chat?node-id=0%3A1
+    </p>
+</p>
+<p>
+    <h3>3.2. Слой сторов:</h3>
+    <p>
+        Добавить отдельный слой сторов для хранения данных (на этом этапе данные можно хранить в константах). Данные для отображения необходимо брать из сторов и прокидывать в компоненты.
+    </p>
+</p>
+<p>
+    <h3>3.3. Слой API:</h3>
+    <p>
+        Добавить слой API. Использовать Axios и Json-server.<br>
+        Пример API:
+        <ul>
+            <li>GET /profile</li>
+            <li>GET /friends</li>
+            <li>GET /rooms</li>
+            <li>GET /rooms/1/messages?_start=20&_limit=10</li>
+            <li>POST /rooms/1/messages</li>
+        </ul>
+    </p>
+</p>
+<p><b>Технологии:</b> React / Create-react-app / Es6+ / SCSS</p>
+<p><b>Ограничения:</b> разделить компоненты отображения параметров и контролов в разные компоненты.</p>
