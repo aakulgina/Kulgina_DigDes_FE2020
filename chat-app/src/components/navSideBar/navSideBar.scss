@@ -1,125 +1,99 @@
 @import '~antd/dist/antd.css';
 @import '~react-custom-scroll/dist/customScroll.css';
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import '../../styles/mixins';
 
 .nav-bar {
-    display: flex;
-    flex-direction: column;
-    background-color: #25272A;
+  @include flex(column, '', '');
+  background-color: #25272A;
+  color: white;
+  opacity: 0.75;
+  padding: 36px 25px 10px;
+
+  .header button {
+    background: #25272A;
+    border: 1px solid #25272A;
     color: white;
-    mix-blend-mode: normal;
-    opacity: 0.75;
-    padding: 36px 25px 10px 25px;
+    padding: 0px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
   
-    .header button {
-      background: #25272A;
-      border: 1px solid #25272A;
-      color: white;
-      padding: 0px;
-      font-size: 20px;
-      line-height: 24px;
-      font-weight: bold;
-    }
+  .settingIcon {
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    @include flex(row, center, space-between);
+  }
+
+  .threads-all, .channels-list, .friends-list .wrapper {
+    color: #b5b5b5;
+  }
   
-    .settingIcon {
-      font-size: 18px;
-      opacity: 0.6;
-    }
-  
-    .header {
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .threads {
-      margin-bottom: 30px;
-  
-      &-all {
-        color: #b5b5b5;
-  
-        & > :first-child {
-          margin-right: 10px;
-        }
+  .threads {
+    margin-bottom: 30px;
+
+    &-all > :first-child {
+        margin-right: 10px;
       }
-    }
+  }
   
-    .channels > div {
+  .channels, .friends {
+    @include flex(column, '', '');
+    flex: 1 1 auto;
+    height: 40%;
+
+    > div {
       margin-bottom:10px;
     }
+  }
   
-    .channels, .friends {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 auto;
-      height: 40%;
-    }
+  .channels-header {
+    @include flex(row, '', space-between);
+  }
   
-    .channels-header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      font-size: 12px;
-      line-height: 14px;
-      color: #919191
-    }
-  
-    .channels-list {
-      color: #b5b5b5;
-      
-      & > div {
-        padding: 5px 10px 5px 15px;
-      }
-  
-      :hover {
-        cursor: pointer;
-        background: rgba($color: #ffffff, $alpha: 0.2);
-        color: #ffffff;
-        border-radius: 5px;
-      }
-    }
-  
-    .friends {
-      .header {
-        font-size: 12px;
-        line-height: 14px;
-        color: #919191;
-      }
-  
-      > div {
-        margin-bottom: 10px;
-      }
-    }
-  
-    .friends-list {
-      .wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        color: #b5b5b5;
-  
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
-  
-        :first-child {
-          margin-right: 5px;
-        }
-  
-        .online, .offline {
-          margin-left: 0px;
-          margin-right: 10px;
-        }
-  
-        .user-photo {
-          width: 32px;
-          height: 32px;
-          background-color: goldenrod;
-          border-radius: 3px;
-          margin-right: 10px;
-        }
-      }
+  .channels-list > div {
+    padding: 5px 10px 5px 15px;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba($color: #ffffff, $alpha: 0.2);
+      color: #ffffff;
+      border-radius: 5px;
     }
   }
+  
+  .channels-header, .friends .header {
+      font-size: 12px;
+      line-height: 14px;
+      color: #919191;
+    }
+  
+  .friends-list .wrapper {
+    @include flex(row, center, '');
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    :first-child {
+      margin-right: 5px;
+    }
+
+    .online, .offline {
+      margin-left: 0px;
+      margin-right: 10px;
+    }
+
+    .user-photo {
+      width: 32px;
+      height: 32px;
+      background-color: goldenrod;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+  }
+}

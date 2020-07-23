@@ -9,8 +9,8 @@ function Chat() {
     return (
         <Col className='chat' flex='auto'>
           <div className='chat-header'>
-            <div className='chat-name'>
-              <h3>#chat_name</h3>
+            <div className='wrapper'>
+              <span className='chat-name'>#chat_name</span>
               <StarOutlined className='icon' />
             </div>
               <Col className='meta' span={10}>
