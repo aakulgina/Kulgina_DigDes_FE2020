@@ -1,0 +1,77 @@
+@import '~antd/dist/antd.css';
+@import '~react-custom-scroll/dist/customScroll.css';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.profile-bar {
+    background-color: #dad6d6e3;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  
+    & > :not(:first-child) {
+      margin: 0px 20px;
+    }
+  
+    & > :not(:last-child) {
+      margin-bottom: 20px;
+    }
+  
+    .user-photo {
+      background-color: aqua;
+      height: 215px;
+      width: 215px;
+    }
+  
+    .user-info, .user-info .text {
+      display: flex;
+      flex-direction: column;
+  
+      .user-job, .text .label {
+        color: #5f6164;
+        font-size: 12px;
+        line-height: 14px;
+      }
+  
+      .text .value {
+        color: black;
+      }
+  
+      .user-name {
+        font-weight: bold;
+        color: black;
+        font-size: 16px;
+        line-height: 19px;
+      }
+  
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+    }
+  
+    .user-info > div:not(:last-child) {
+        margin-bottom: 10px;
+    }
+  
+    .social-media > :not(:last-child) {
+      margin-right: 5px;
+    }
+  
+    .actions > :first-child {
+      margin-right: 5px;
+    }
+  
+    .actions > button {
+      border-radius: 10px;
+      background: #3577ef;
+  
+      &.writeTo {
+        width: 130px;
+        padding: 0px 15px;
+      }
+  
+      &.additional {
+        padding: 0px 12px;
+      }
+    }
+  }
