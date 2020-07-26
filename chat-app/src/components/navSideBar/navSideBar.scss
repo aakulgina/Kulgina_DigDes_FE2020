@@ -30,7 +30,7 @@
     @include flex(row, center, space-between);
   }
 
-  .threads-all, .channels-list, .friends-list .wrapper {
+  .threads-all, .channels-list a, .friends-list .wrapper {
     color: #b5b5b5;
   }
   
@@ -57,14 +57,19 @@
     @include flex(row, '', space-between);
   }
   
-  .channels-list > div {
+  .channels-list {
+    
+    @include flex(column, '', '');
+
+    & > a {
     padding: 5px 10px 5px 15px;
 
-    &:hover {
-      cursor: pointer;
-      background: rgba($color: #ffffff, $alpha: 0.2);
-      color: #ffffff;
-      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+        background: rgba($color: #ffffff, $alpha: 0.2);
+        color: #ffffff;
+        border-radius: 5px;
+      }
     }
   }
   
