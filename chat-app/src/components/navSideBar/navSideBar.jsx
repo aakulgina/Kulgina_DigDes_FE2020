@@ -3,6 +3,7 @@ import CustomScroll from 'react-custom-scroll'
 import { Col, Button, Menu, Dropdown, Tooltip } from 'antd'
 import { ThreadsIcon } from '../icons'
 import { DownOutlined, SettingOutlined, PlusCircleOutlined } from '@ant-design/icons'
+import { NavLink } from 'react-router-dom'
 
 import { observer } from 'mobx-react'
 import state from '../../mobx-store'
@@ -11,7 +12,8 @@ const NavSideBar = observer(() => {
 
   const { addChat,
           chats,
-          countChats } = state
+          countChats,
+          updateCurrentChat } = state
 
   const nomadList = (
       <Menu>
@@ -23,7 +25,9 @@ const NavSideBar = observer(() => {
     )
 
   return (
+
       <Col className='nav-bar' span={5}>
+        
         <div className='header'>
           <Dropdown overlay={nomadList}>
             <Button>
@@ -32,6 +36,7 @@ const NavSideBar = observer(() => {
           </Dropdown>
           <SettingOutlined className='settingIcon' />
         </div>
+
         <div className='threads'>
           <div className='threads-all'>
             <ThreadsIcon />
@@ -44,6 +49,7 @@ const NavSideBar = observer(() => {
                 addChat(newChatName) }}/>
           </Tooltip>
         </div>
+
         <div className='channels'>
           <div className='channels-header'>
             <span>CHANNELS</span>
@@ -53,12 +59,15 @@ const NavSideBar = observer(() => {
             <div className='channels-list text'>
               {Object.keys(chats).map((element, index) => {
                 return(
-                  <div key={index}>#{element}</div>
+                  <NavLink key={index} to={`/${element}`} onClick={() => {updateCurrentChat(element)}}>
+                    #{element}
+                  </NavLink>
                 )
               })}
             </div>
           </CustomScroll>
         </div>
+        
         <div className='friends'>
           <div className='header'>
             <span>FRIENDS</span>
@@ -87,6 +96,7 @@ const NavSideBar = observer(() => {
             </div>
           </CustomScroll>
         </div>
+
       </Col>
   )
 })

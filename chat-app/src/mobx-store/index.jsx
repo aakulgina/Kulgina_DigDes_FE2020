@@ -1,19 +1,13 @@
 import { observable, computed, action } from 'mobx'
 
-// const messageModel = {
-//     author: '',
-//     text: '',
-//     time: ''
+// const chatModel = {
+//     name: '',
+//     messages: {
+//         author: '',
+//         text: '',
+//         time: ''
+//     }
 // }
-
-const chatModel = {
-    name: '',
-    messages: {
-        author: '',
-        text: '',
-        time: ''
-    }
-}
 
 let now = new Date()
 let time = ''
@@ -35,9 +29,9 @@ class GlobalStore {
 
     @observable currentChat = 'Help_Desk'
 
-    @computed get countMessages() {
-        return this.chats[this.currentChat].messages.length
-    }
+    // @computed get countMessages() {
+    //     return this.chats[this.currentChat].messages.length
+    // }
 
     @computed get countChats() {
         return Object.keys(this.chats).length
@@ -61,6 +55,10 @@ class GlobalStore {
 
     @action.bound addChat(newChatName) {
         this.chats[newChatName] = {messages: []}
+    }
+
+    @action.bound updateCurrentChat(name) {
+        this.currentChat = name
     }
 }
 
