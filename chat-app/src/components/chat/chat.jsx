@@ -14,13 +14,14 @@ const Chat = observer((props) => {
   const { addMessage,
           filteredMessages,
           search,
-          changeSearch } = state
+          changeSearch,
+          currentChat } = state
   
   return (
       <Col className='chat' flex='auto'>
         <div className='chat-header'>
           <div className='wrapper'>
-            <span className='chat-name'>#chat_name</span>
+            <span className='chat-name'>#{currentChat}</span>
             <StarOutlined className='icon' />
           </div>
             <Col className='meta' span={10}>
