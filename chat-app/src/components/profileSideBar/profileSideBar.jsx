@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Button, Menu, Dropdown } from 'antd'
 import { FBIcon, TwitterIcon, InstaIcon, LinkedInIcon } from '../icons'
-import { DownOutlined } from '@ant-design/icons'
+import { CaretDownOutlined } from '@ant-design/icons'
 
 
 function ProfileSideBar() {
@@ -35,7 +35,7 @@ function ProfileSideBar() {
             <Button className='writeTo' type='primary'>Message</Button>
             <Dropdown overlay={profileMenu}>
               <Button className='additional' type='primary'>
-                <DownOutlined />
+                <CaretDownOutlined />
               </Button>
             </Dropdown>
           </div>
