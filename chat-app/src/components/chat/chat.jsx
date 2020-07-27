@@ -2,7 +2,7 @@ import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import TextareaAutosize from 'react-textarea-autosize'
 import MultilineTextOutput from '../multilineTextOutput'
-import { Col, Input, Empty } from 'antd'
+import { Col, Input, Empty, Tooltip } from 'antd'
 import { Switch, Route, NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
     UserOutlined, SmileOutlined, AudioOutlined, PaperClipOutlined,
@@ -28,13 +28,16 @@ const Chat = observer((props) => {
         {Object.keys(chats).map((el, index) => {
           
           return (
+
             <Route key={index} path={`/${el}`}>
 
               <div className='chat-header'>
                 <div className='wrapper'>
-                  <NavLink to='/'>
-                    <CloseSquareOutlined className='icon' />
-                  </NavLink>
+                  <Tooltip title='Close'>
+                    <NavLink to='/'>
+                      <CloseSquareOutlined className='icon' />
+                    </NavLink>
+                  </Tooltip>
                   <span className='chat-name'>#{currentChat}</span>
                   <StarOutlined className='icon' />
                 </div>
