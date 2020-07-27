@@ -2,7 +2,7 @@ import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import { Col, Button, Menu, Dropdown, Tooltip } from 'antd'
 import { ThreadsIcon } from '../icons'
-import { DownOutlined, SettingOutlined, PlusCircleOutlined } from '@ant-design/icons'
+import { DownOutlined, SettingOutlined, PlusCircleOutlined, CloseCircleOutlined } from '@ant-design/icons'
 import { NavLink } from 'react-router-dom'
 
 import { observer } from 'mobx-react'
@@ -13,7 +13,9 @@ const NavSideBar = observer(() => {
   const { addChat,
           chats,
           countChats,
-          updateCurrentChat } = state
+          updateCurrentChat,
+          deleteChat,
+          currentChat } = state
 
   const nomadList = (
       <Menu>
@@ -56,12 +58,35 @@ const NavSideBar = observer(() => {
             <span>{countChats}</span>
           </div>
           <CustomScroll flex='1 1 auto'>
-            <div className='channels-list text'>
+            <div className='channels-list'>
               {Object.keys(chats).map((element, index) => {
                 return(
-                  <NavLink key={index} to={`/${element}`} onClick={() => {updateCurrentChat(element)}}>
-                    #{element}
-                  </NavLink>
+                  <div key={index} className='item'>
+                    <NavLink to={`/${element}`} onClick={() => {updateCurrentChat(element)}}>
+                      #{element}
+                    </NavLink>
+                    <Tooltip title='Delete chat'>
+                      {element !== 'Help_Desk' && element === currentChat
+                        ? (
+                          <NavLink to='/'>
+                            <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
+                          </NavLink>
+                          )
+                        : element !== 'Help_Desk' && currentChat === 'Help_Desk'
+                          ? (
+                            <NavLink to='/'>
+                              <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
+                            </NavLink>
+                          )
+                          : element !== 'Help_Desk' && element !== currentChat
+                            ? (
+                              <NavLink to={`${currentChat}`}>
+                                <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
+                              </NavLink>
+                            )
+                            : (<span className='text' style={{display: 'none'}}>Delete</span>)}
+                      </Tooltip>
+                  </div>
                 )
               })}
             </div>

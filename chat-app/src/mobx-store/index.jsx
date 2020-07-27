@@ -54,11 +54,18 @@ class GlobalStore {
     }
 
     @action.bound addChat(newChatName) {
-        this.chats[newChatName] = {messages: []}
+        if (newChatName !== null) {
+            this.chats[newChatName] = {messages: []}
+        }
     }
 
     @action.bound updateCurrentChat(name) {
         this.currentChat = name
+    }
+
+    @action.bound deleteChat(name, current='Help_Desk') {
+        delete(this.chats[name])
+        this.currentChat = current
     }
 }
 

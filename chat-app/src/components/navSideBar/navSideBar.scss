@@ -19,7 +19,7 @@
     font-weight: bold;
   }
   
-  .settingIcon, .newChatIcon {
+  .settingIcon, .newChatIcon, .item .icon {
     font-size: 18px;
     opacity: 0.6;
     cursor: pointer;
@@ -30,7 +30,7 @@
     @include flex(row, center, space-between);
   }
 
-  .threads-all, .channels-list a, .friends-list .wrapper {
+  .threads-all, .item a, .item .text, .friends-list .wrapper {
     color: #b5b5b5;
   }
   
@@ -61,14 +61,34 @@
     
     @include flex(column, '', '');
 
-    & > a {
-    padding: 5px 10px 5px 15px;
+    & > .item {
+      padding: 5px 10px 5px 15px;
+      @include flex(row, '', space-between);
+
+      a:first-child {
+        width: 100%;
+      }
+
+      .icon {
+        opacity: 1;
+        display: none;
+      }
 
       &:hover {
         cursor: pointer;
         background: rgba($color: #ffffff, $alpha: 0.2);
         color: #ffffff;
         border-radius: 5px;
+
+        & {
+          .icon {
+            display: inline-block;
+          }
+        }
+
+        a, .text {
+          color: #ffffff
+        }
       }
     }
   }
