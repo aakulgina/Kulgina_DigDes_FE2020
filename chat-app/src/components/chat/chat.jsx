@@ -2,10 +2,11 @@ import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import TextareaAutosize from 'react-textarea-autosize'
 import MultilineTextOutput from '../multilineTextOutput'
-import { Col, Input } from 'antd'
-import { Switch, Route } from 'react-router-dom'
+import { Col, Input, Empty } from 'antd'
+import { Switch, Route, NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
-    UserOutlined, SmileOutlined, AudioOutlined, PaperClipOutlined } from '@ant-design/icons'
+    UserOutlined, SmileOutlined, AudioOutlined, PaperClipOutlined,
+    CloseSquareOutlined } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../mobx-store'
@@ -31,6 +32,9 @@ const Chat = observer((props) => {
 
               <div className='chat-header'>
                 <div className='wrapper'>
+                  <NavLink to='/'>
+                    <CloseSquareOutlined className='icon' />
+                  </NavLink>
                   <span className='chat-name'>#{currentChat}</span>
                   <StarOutlined className='icon' />
                 </div>
@@ -87,6 +91,16 @@ const Chat = observer((props) => {
             </Route>
           )
         })}
+
+        <Route path='/' exact>
+          <Empty className='empty'
+            image='https://publicdomainvectors.org/photos/Sleeping-Kitty.png'
+            imageStyle={{height: 220, marginBottom: 15}}
+            description={
+              <span className='text'>У вас ни одного открытого чата. :(</span>
+            }
+          />
+        </Route>
       
       </Switch>
 

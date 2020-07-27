@@ -4,8 +4,12 @@
 @import '../../styles/mixins';
 
 .chat {
-  @include flex(column, '', '');
+  @include flex(column, '', center);
   color: black;
+
+  .empty .text {
+    font-size: 20px;
+  }
 
   .chat-header, .wrapper, .chat-input, .chat-members {
     @include flex(row, center, '');
@@ -20,9 +24,10 @@
   .wrapper {
     .icon {
       font-size: 17px;
+      display: block;
     }
     
-    & > :first-child {
+    & > :not(:last-child) {
       margin-right: 10px;
     }
   }
