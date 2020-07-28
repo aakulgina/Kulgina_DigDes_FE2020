@@ -2,11 +2,11 @@ import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import TextareaAutosize from 'react-textarea-autosize'
 import MultilineTextOutput from '../multilineTextOutput'
-import { Col, Input, Empty, Tooltip } from 'antd'
+import { Col, Input, Empty, Tooltip, Popconfirm, Modal } from 'antd'
 import { Switch, Route, NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
     UserOutlined, SmileOutlined, AudioOutlined, PaperClipOutlined,
-    CloseSquareOutlined } from '@ant-design/icons'
+    CloseSquareOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../mobx-store'
@@ -24,6 +24,8 @@ const Chat = observer(() => {
           selectedMessages,
           unselectAll,
           deleteSelectedMessages } = state
+
+  const { confirm } = Modal
   
   return (
     <Col className='chat' flex='auto'>
@@ -56,7 +58,13 @@ const Chat = observer(() => {
                   <span className='chat-name'>#{chat}</span>
                   <StarOutlined className='icon' />
                 </div>
-                <span onClick={() => {deleteSelectedMessages()}}>Удалить выбранное</span>
+                <span onClick={() => {
+                    confirm({ title: 'Are you sure delete these messages?',
+                              icon: <ExclamationCircleOutlined />,
+                              onOk() { deleteSelectedMessages() }})
+                  }}>
+                  Удалить выбранное
+                </span>
                 <span onClick={() => {unselectAll()}}>Снять выделение</span>
                 <span>Выделено: {selectedMessages}</span>
                 <Col className='meta' span={10}>
