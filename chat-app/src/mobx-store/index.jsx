@@ -1,14 +1,5 @@
 import { observable, computed, action } from 'mobx'
 
-// const chatModel = {
-//     name: '',
-//     messages: {
-//         author: '',
-//         text: '',
-//         time: ''
-//     }
-// }
-
 let now = new Date()
 let time = ''
 if (now.getMinutes() < 10) {
@@ -24,7 +15,8 @@ class GlobalStore {
             text: `Добро пожаловать!
             Чтобы начать общаться, создайте свой чат или примите приглашение от друга.
             Я пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!`,
-            time: `${time}`}],
+            time: `${time}`,
+            selected: false}],
         opened: false
     }}
 
@@ -32,9 +24,7 @@ class GlobalStore {
 
     @observable currentChat = 'Help_Desk'
 
-    // @computed get countMessages() {
-    //     return this.chats[this.currentChat].messages.length
-    // }
+    @observable selectedMessages = 0
 
     @computed get countChats() {
         return Object.keys(this.chats).length
@@ -79,6 +69,33 @@ class GlobalStore {
     @action.bound deleteChat(name, current='Help_Desk') {
         delete(this.chats[name])
         this.currentChat = current
+    }
+
+    @action.bound setSelected(index) {
+        this.chats[this.currentChat].messages[index].selected = !this.chats[this.currentChat].messages[index].selected
+        this.countSelectedMessages()
+    }
+
+    @action.bound countSelectedMessages() {
+        let count = 0
+        for (let element in this.chats[this.currentChat].messages) {
+            if (this.chats[this.currentChat].messages[element].selected === true) {
+                count += 1
+            }
+        }
+        this.selectedMessages = count
+    }
+
+    @action.bound unselectAll() {
+        for (let element in this.chats[this.currentChat].messages) {
+            this.chats[this.currentChat].messages[element].selected = false
+        }
+        this.selectedMessages = 0
+    }
+
+    @action.bound deleteSelectedMessages() {
+        this.chats[this.currentChat].messages = this.chats[this.currentChat].messages
+                                        .filter(item => !item.selected)
     }
 }
 

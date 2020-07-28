@@ -65,6 +65,14 @@
     @include flex(column, '', '');
     padding: 10px 0px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.selected {
+      color: red;
+    }
+
     .sender {
       margin-bottom: 10px;
     }

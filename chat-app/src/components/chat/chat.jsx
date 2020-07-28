@@ -18,7 +18,12 @@ const Chat = observer(() => {
           search,
           changeSearch,
           chats,
-          closeChat } = state
+          closeChat,
+          setSelected,
+          currentChat,
+          selectedMessages,
+          unselectAll,
+          deleteSelectedMessages } = state
   
   return (
     <Col className='chat' flex='auto'>
@@ -51,6 +56,9 @@ const Chat = observer(() => {
                   <span className='chat-name'>#{chat}</span>
                   <StarOutlined className='icon' />
                 </div>
+                <span onClick={() => {deleteSelectedMessages()}}>Удалить выбранное</span>
+                <span onClick={() => {unselectAll()}}>Снять выделение</span>
+                <span>Выделено: {selectedMessages}</span>
                 <Col className='meta' span={10}>
                   <div className='chat-members'>
                     <UserOutlined />
@@ -66,8 +74,12 @@ const Chat = observer(() => {
               <CustomScroll flex='1 1 auto' keepAtBottom={true}>
                 <div className='chat-body'>
                   {filteredMessages.map((element, index) => {
+                    let klass = ''
+                    if (chats[currentChat].messages[index].selected) {
+                      klass = ' selected'
+                    }
                     return(
-                      <div key={index} className='message'>
+                      <div key={index} className={`message${klass}`} onClick={() => setSelected(index)}>
                         <span className='sender'>{element.author} ({element.time}):</span>
                         <MultilineTextOutput class='text' value={element.text}/>
                       </div>
@@ -92,7 +104,7 @@ const Chat = observer(() => {
                             time = `${now.getHours()}:${now.getMinutes()}`
                           }
                           addMessage(chat, {author: 'QQQ', text: target.value.slice(0, -1),
-                              time: time})
+                              time: time, selected: false})
                           target.value=''
                       }
                     }

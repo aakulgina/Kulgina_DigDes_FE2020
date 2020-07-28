@@ -60,7 +60,7 @@ const NavSideBar = observer(() => {
           <CustomScroll flex='1 1 auto'>
             <div className='channels-list'>
               {Object.keys(chats).map((element, index) => {
-                var klass = ''
+                let klass = ''
                 if (chats[element].opened) {
                   klass = ' open'
                 }
