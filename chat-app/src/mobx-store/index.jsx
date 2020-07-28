@@ -19,11 +19,14 @@ if (now.getMinutes() < 10) {
 
 class GlobalStore {
     
-    @observable chats = {'Help_Desk': {messages: [{author: 'Chat Bot',
-        text: `Добро пожаловать!
-        Чтобы начать общаться, создайте свой чат или примите приглашение от друга.
-        Я пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!`,
-        time: `${time}`}]}}
+    @observable chats = {'Help_Desk': {
+        messages: [{author: 'Chat Bot',
+            text: `Добро пожаловать!
+            Чтобы начать общаться, создайте свой чат или примите приглашение от друга.
+            Я пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!`,
+            time: `${time}`}],
+        opened: false
+    }}
 
     @observable search = ''
 
@@ -45,8 +48,8 @@ class GlobalStore {
                     || !!~message.text.toLowerCase().indexOf(_search))
     }
 
-    @action.bound addMessage(messageModel) {
-        this.chats[this.currentChat].messages.push(messageModel)
+    @action.bound addMessage(chat, messageModel) {
+        this.chats[chat].messages.push(messageModel)
     }
 
     @action.bound changeSearch(value) {
@@ -55,12 +58,22 @@ class GlobalStore {
 
     @action.bound addChat(newChatName) {
         if (newChatName !== null) {
-            this.chats[newChatName] = {messages: []}
+            this.chats[newChatName] = {messages: [], opened: false}
         }
     }
 
-    @action.bound updateCurrentChat(name) {
+    @action.bound openChat(name) {
+        for (var chat in this.chats) {
+            if (this.chats[chat] !== name) {
+                this.chats[chat].opened = false
+            }
+        }
+        this.chats[name].opened = true
         this.currentChat = name
+    }
+
+    @action.bound closeChat(name) {
+        this.chats[name].opened = false
     }
 
     @action.bound deleteChat(name, current='Help_Desk') {

@@ -13,9 +13,9 @@ const NavSideBar = observer(() => {
   const { addChat,
           chats,
           countChats,
-          updateCurrentChat,
           deleteChat,
-          currentChat } = state
+          currentChat,
+          openChat } = state
 
   const nomadList = (
       <Menu>
@@ -62,30 +62,27 @@ const NavSideBar = observer(() => {
               {Object.keys(chats).map((element, index) => {
                 return(
                   <div key={index} className='item'>
-                    <NavLink to={`/${element}`} onClick={() => {updateCurrentChat(element)}}>
+                    <NavLink to={`/${element}`} onClick={() => {openChat(element)}}>
                       #{element}
                     </NavLink>
                     <Tooltip title='Delete chat'>
-                      {element !== 'Help_Desk' && element === currentChat
+                      {element !== 'Help_Desk'
                         ? (
-                          <NavLink to='/'>
-                            <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
-                          </NavLink>
-                          )
-                        : element !== 'Help_Desk' && currentChat === 'Help_Desk'
-                          ? (
-                            <NavLink to='/'>
-                              <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
-                            </NavLink>
-                          )
-                          : element !== 'Help_Desk' && element !== currentChat
+                          chats[element].opened === true || (currentChat === 'Help_Desk' && chats['Help_Desk'].opened === false)
                             ? (
-                              <NavLink to={`${currentChat}`}>
+                              <NavLink to='/'>
                                 <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
                               </NavLink>
                             )
-                            : (<span className='text' style={{display: 'none'}}>Delete</span>)}
-                      </Tooltip>
+                            : (
+                              <NavLink to={`${currentChat}`}>
+                                <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element, currentChat)}} />
+                              </NavLink>
+                            )
+                        )
+                        : (<span className='text' style={{display: 'none'}}>Delete</span>)
+                      }
+                    </Tooltip>
                   </div>
                 )
               })}

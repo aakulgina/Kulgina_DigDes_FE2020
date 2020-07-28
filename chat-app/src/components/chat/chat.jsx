@@ -11,34 +11,44 @@ import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
 import { observer } from 'mobx-react'
 import state from '../../mobx-store'
 
-const Chat = observer((props) => {
+const Chat = observer(() => {
 
   const { addMessage,
           filteredMessages,
           search,
           changeSearch,
           chats,
-          currentChat } = state
+          closeChat } = state
   
   return (
     <Col className='chat' flex='auto'>
       
       <Switch>
+
+      <Route path='/' exact>
+          <Empty className='empty'
+            image='https://publicdomainvectors.org/photos/Sleeping-Kitty.png'
+            imageStyle={{height: 220, marginBottom: 15}}
+            description={
+              <span className='text'>У вас ни одного открытого чата. :(</span>
+            }
+          />
+        </Route>
         
-        {Object.keys(chats).map((el, index) => {
+        {Object.keys(chats).map((chat, index) => {
           
           return (
 
-            <Route key={index} path={`/${el}`}>
+            <Route key={index} path={`/${chat}`}>
 
               <div className='chat-header'>
                 <div className='wrapper'>
                   <Tooltip title='Close'>
                     <NavLink to='/'>
-                      <CloseSquareOutlined className='icon' />
+                      <CloseSquareOutlined className='icon' onClick={() => {closeChat(chat)}} />
                     </NavLink>
                   </Tooltip>
-                  <span className='chat-name'>#{currentChat}</span>
+                  <span className='chat-name'>#{chat}</span>
                   <StarOutlined className='icon' />
                 </div>
                 <Col className='meta' span={10}>
@@ -70,7 +80,7 @@ const Chat = observer((props) => {
                 <PaperClipOutlined className='icon' rotate={135}/>
                 <AudioOutlined className='icon' />
                 <TextareaAutosize className='text-input' defaultValue=''
-                  placeholder={`Message in #${currentChat}`} maxRows='7'
+                  placeholder={`Message in #${chat}`} maxRows='7'
                   onKeyUp={({ target, keyCode, shiftKey }) => {
                     if (!shiftKey && keyCode === 13) {
                       if (target.value.replace(/\n/g, '') !== '') {
@@ -81,7 +91,7 @@ const Chat = observer((props) => {
                           } else {
                             time = `${now.getHours()}:${now.getMinutes()}`
                           }
-                          addMessage({author: 'QQQ', text: target.value.slice(0, -1),
+                          addMessage(chat, {author: 'QQQ', text: target.value.slice(0, -1),
                               time: time})
                           target.value=''
                       }
@@ -94,16 +104,6 @@ const Chat = observer((props) => {
             </Route>
           )
         })}
-
-        <Route path='/' exact>
-          <Empty className='empty'
-            image='https://publicdomainvectors.org/photos/Sleeping-Kitty.png'
-            imageStyle={{height: 220, marginBottom: 15}}
-            description={
-              <span className='text'>У вас ни одного открытого чата. :(</span>
-            }
-          />
-        </Route>
       
       </Switch>
 
