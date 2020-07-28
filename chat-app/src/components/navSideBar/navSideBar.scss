@@ -74,13 +74,13 @@
         display: none;
       }
 
-      &:hover {
+      &:hover, &.open {
         cursor: pointer;
         background: rgba($color: #ffffff, $alpha: 0.2);
         color: #ffffff;
         border-radius: 5px;
 
-        & {
+      &:hover {
           .icon {
             display: inline-block;
           }

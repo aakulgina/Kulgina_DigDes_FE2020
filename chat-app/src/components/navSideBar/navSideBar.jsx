@@ -60,8 +60,12 @@ const NavSideBar = observer(() => {
           <CustomScroll flex='1 1 auto'>
             <div className='channels-list'>
               {Object.keys(chats).map((element, index) => {
+                var klass = ''
+                if (chats[element].opened) {
+                  klass = ' open'
+                }
                 return(
-                  <div key={index} className='item'>
+                  <div key={index} className={`item${klass}`}>
                     <NavLink to={`/${element}`} onClick={() => {openChat(element)}}>
                       #{element}
                     </NavLink>
