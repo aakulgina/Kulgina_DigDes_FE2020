@@ -23,7 +23,7 @@ const Chat = observer(() => {
             image='https://publicdomainvectors.org/photos/Sleeping-Kitty.png'
             imageStyle={{height: 220, marginBottom: 15}}
             description={
-              <span className='text'>У вас ни одного открытого чата. :(</span>
+              <span className='text'>You have no open chats. :(</span>
             }
           />
         </Route>
