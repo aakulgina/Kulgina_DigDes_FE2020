@@ -53,6 +53,7 @@ class GlobalStore {
     }
 
     @action.bound openChat(name) {
+        this.unselectAll()
         for (var chat in this.chats) {
             if (this.chats[chat] !== name) {
                 this.chats[chat].opened = false
@@ -97,6 +98,10 @@ class GlobalStore {
         this.chats[this.currentChat].messages = this.chats[this.currentChat].messages
                                         .filter(item => !item.selected)
         this.selectedMessages = 0
+    }
+
+    @action.bound cleanSearch() {
+        this.search = ''
     }
 }
 

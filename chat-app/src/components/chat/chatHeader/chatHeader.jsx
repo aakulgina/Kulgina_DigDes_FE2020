@@ -3,7 +3,7 @@ import { Col, Input, Tooltip, Modal } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
     UserOutlined, CloseCircleOutlined, ExclamationCircleOutlined, LeftCircleOutlined,
-    DeleteOutlined } from '@ant-design/icons'
+    DeleteOutlined, CloseOutlined } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
@@ -15,7 +15,8 @@ const ChatHeader = observer((props) => {
         closeChat,
         selectedMessages,
         unselectAll,
-        deleteSelectedMessages } = state
+        deleteSelectedMessages,
+        cleanSearch } = state
 
     const { confirm } = Modal
 
@@ -23,11 +24,16 @@ const ChatHeader = observer((props) => {
 
         <div className='chat-header'>
             <div className='wrapper'>
-                <Tooltip title='Close'>
-                    <NavLink to='/'>
-                        <LeftCircleOutlined className='icon-control' onClick={() => {closeChat(props.chat)}} />
-                    </NavLink>
-                </Tooltip>
+                {selectedMessages === 0
+                    ? (
+                        <Tooltip title='Close'>
+                            <NavLink to='/'>
+                                <LeftCircleOutlined className='icon-control' onClick={() => {closeChat(props.chat)}} />
+                            </NavLink>
+                        </Tooltip>
+                    )
+                    : ( '' )
+                }
                 <span className='chat-name'>#{props.chat}</span>
                 <StarOutlined className='icon' />
             </div>
@@ -57,7 +63,12 @@ const ChatHeader = observer((props) => {
                     <span>1</span>
                 </div>
                 <Input value={search} onChange={({target}) => changeSearch(target.value)} placeholder='Search...' type='text'
-                    suffix={<SearchOutlined />} />
+                    suffix={<SearchOutlined />}
+                    prefix={
+                        search !== ''
+                        ? ( <CloseOutlined onClick={() => {cleanSearch()}} /> )
+                        : ( '' )
+                    } />
                 <BellOutlined />
                 <MoreOutlined />
             </Col>
