@@ -18,7 +18,7 @@ const ChatInput = observer((props) => {
                 placeholder={`Message in #${props.chat}`} maxRows='7'
                 onKeyUp={({ target, keyCode, shiftKey }) => {
                     if (!shiftKey && keyCode === 13) {
-                    if (target.value.replace(/\n/g, '') !== '') {
+                    if (target.value.replace(/\n/g, '').replace(/\s/g, '') !== '') {
                         let now = new Date()
                         let time = ''
                         if (now.getMinutes() < 10) {
