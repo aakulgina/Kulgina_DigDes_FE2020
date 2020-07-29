@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import MultilineTextOutput from '../../multilineTextOutput'
+import { CheckCircleOutlined } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
@@ -22,8 +23,11 @@ const ChatBody = observer(() => {
                     }
                     return(
                     <div key={index} className={`message${klass}`} onClick={() => setSelected(index)}>
-                        <span className='sender'>{element.author} ({element.time}):</span>
-                        <MultilineTextOutput class='text' value={element.text}/>
+                        <CheckCircleOutlined className='icon' />
+                        <div className='wrapper'>
+                            <span className='sender'>{element.author} ({element.time}):</span>
+                            <MultilineTextOutput class='text' value={element.text}/>
+                        </div>
                     </div>
                     )
                 })}

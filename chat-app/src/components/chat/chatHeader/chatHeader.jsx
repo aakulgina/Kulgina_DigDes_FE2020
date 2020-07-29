@@ -2,7 +2,8 @@ import React from 'react'
 import { Col, Input, Tooltip, Modal } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
-    UserOutlined, CloseSquareOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
+    UserOutlined, CloseCircleOutlined, ExclamationCircleOutlined, LeftCircleOutlined,
+    DeleteOutlined } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
@@ -24,21 +25,32 @@ const ChatHeader = observer((props) => {
             <div className='wrapper'>
                 <Tooltip title='Close'>
                     <NavLink to='/'>
-                    <CloseSquareOutlined className='icon' onClick={() => {closeChat(props.chat)}} />
+                        <LeftCircleOutlined className='icon-control' onClick={() => {closeChat(props.chat)}} />
                     </NavLink>
                 </Tooltip>
                 <span className='chat-name'>#{props.chat}</span>
                 <StarOutlined className='icon' />
             </div>
-            <span onClick={() => {
-                confirm({ title: 'Are you sure delete these messages?',
-                        icon: <ExclamationCircleOutlined />,
-                        onOk() { deleteSelectedMessages() }})
-            }}>
-                Удалить выбранное
-            </span>
-            <span onClick={() => {unselectAll()}}>Снять выделение</span>
-            <span>Выделено: {selectedMessages}</span>
+            {selectedMessages > 0
+                ? (
+                    <div className='wrapper'>
+                        <span>Selected: {selectedMessages}</span>
+                        <Tooltip title='Unselect'>
+                            <CloseCircleOutlined className='icon-control' onClick={() => {unselectAll()}} />
+                        </Tooltip>
+                        <Tooltip title='Delete'>
+                            <DeleteOutlined className='icon-control' onClick={() => {
+                                if (selectedMessages > 0) {
+                                confirm({ title: 'Are you sure delete these messages?',
+                                        icon: <ExclamationCircleOutlined />,
+                                        onOk() { deleteSelectedMessages() }})
+                                }
+                            }} />
+                        </Tooltip>
+                    </div>
+                )
+                : ( <span style={{display: 'none'}}>Controls</span> )
+            }
             <Col className='meta' span={10}>
                 <div className='chat-members'>
                     <UserOutlined />
