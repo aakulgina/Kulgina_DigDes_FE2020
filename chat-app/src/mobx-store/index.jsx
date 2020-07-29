@@ -96,6 +96,7 @@ class GlobalStore {
     @action.bound deleteSelectedMessages() {
         this.chats[this.currentChat].messages = this.chats[this.currentChat].messages
                                         .filter(item => !item.selected)
+        this.selectedMessages = 0
     }
 }
 
