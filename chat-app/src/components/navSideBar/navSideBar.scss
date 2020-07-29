@@ -71,8 +71,16 @@
 
       .icon {
         opacity: 1;
-        display: none;
-      }
+
+        &.added {
+          color: #ffffff;
+          margin-left: 15px;
+        }
+        &.text {
+          display: none;
+          margin-left: 5px;
+        }
+    }
 
       &:hover, &.open {
         cursor: pointer;

@@ -17,7 +17,8 @@ class GlobalStore {
             Я пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!`,
             time: `${time}`,
             selected: false}],
-        opened: false
+        opened: false,
+        starred: false
     }}
 
     @observable search = ''
@@ -48,7 +49,7 @@ class GlobalStore {
 
     @action.bound addChat(newChatName) {
         if (newChatName !== null) {
-            this.chats[newChatName] = {messages: [], opened: false}
+            this.chats[newChatName] = {messages: [], opened: false, starred: false}
         }
     }
 
@@ -102,6 +103,14 @@ class GlobalStore {
 
     @action.bound cleanSearch() {
         this.search = ''
+    }
+
+    @action.bound starChat(chat) {
+        this.chats[chat].starred = !this.chats[chat].starred
+    }
+
+    @computed get sortStarred() {
+        return Object.keys(this.chats).reverse().sort((a, b) => this.chats[a].starred < this.chats[b].starred ? 1 : -1)
     }
 }
 

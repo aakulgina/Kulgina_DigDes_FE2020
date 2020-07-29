@@ -3,7 +3,7 @@ import { Col, Input, Tooltip, Modal } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { SearchOutlined, StarOutlined, BellOutlined, MoreOutlined,
     UserOutlined, CloseCircleOutlined, ExclamationCircleOutlined, LeftCircleOutlined,
-    DeleteOutlined, CloseOutlined } from '@ant-design/icons'
+    DeleteOutlined, CloseOutlined, StarFilled } from '@ant-design/icons'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
@@ -16,7 +16,9 @@ const ChatHeader = observer((props) => {
         selectedMessages,
         unselectAll,
         deleteSelectedMessages,
-        cleanSearch } = state
+        cleanSearch,
+        starChat,
+        chats } = state
 
     const { confirm } = Modal
 
@@ -35,7 +37,10 @@ const ChatHeader = observer((props) => {
                     : ( '' )
                 }
                 <span className='chat-name'>#{props.chat}</span>
-                <StarOutlined className='icon' />
+                {chats[props.chat].starred
+                    ? (<StarFilled className='icon added' onClick={() => {starChat(props.chat)}} />)
+                    : (<StarOutlined className='icon' onClick={() => {starChat(props.chat)}} />)
+                }
             </div>
             {selectedMessages > 0
                 ? (

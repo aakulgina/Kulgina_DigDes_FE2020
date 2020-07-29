@@ -54,7 +54,7 @@
     }
   }
 
-  .icon:hover {
+  .icon:hover, .icon.added {
     color: orange;
   }
 }

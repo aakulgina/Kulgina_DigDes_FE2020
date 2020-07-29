@@ -2,7 +2,7 @@ import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import { Tooltip } from 'antd'
 import { ThreadsIcon } from '../../icons'
-import { PlusCircleOutlined, CloseCircleOutlined } from '@ant-design/icons'
+import { PlusCircleOutlined, CloseCircleOutlined, StarFilled } from '@ant-design/icons'
 import { NavLink } from 'react-router-dom'
 
 import { observer } from 'mobx-react'
@@ -15,7 +15,9 @@ const ChannelsSection = observer(() => {
           countChats,
           deleteChat,
           currentChat,
-          openChat } = state
+          openChat,
+          starChat,
+          sortStarred } = state
 
   return (
 
@@ -43,7 +45,7 @@ const ChannelsSection = observer(() => {
 
         <CustomScroll flex='1 1 auto'>
           <div className='channels-list'>
-            {Object.keys(chats).map((element, index) => {
+            {sortStarred.map((element, index) => {
               let klass = ''
               if (chats[element].opened) {
                 klass = ' open'
@@ -71,6 +73,10 @@ const ChannelsSection = observer(() => {
                       : (<span className='text' style={{display: 'none'}}>Delete</span>)
                     }
                   </Tooltip>
+                  {chats[element].starred
+                        ? (<StarFilled className='icon added' onClick={() => {starChat(element)}}/>)
+                        : ('')
+                      }
                 </div>
               )
             })}
