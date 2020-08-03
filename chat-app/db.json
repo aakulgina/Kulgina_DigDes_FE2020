@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": "o_diggs",
+      "name": "Orlando Diggs",
+      "online": false
+    },
+    {
+      "id": "c_velasco",
+      "name": "Carmen Velasco",
+      "online": false
+    },
+    {
+      "id": "m_jensen",
+      "name": "Marie Jensen",
+      "online": false
+    },
+    {
+      "id": "a_lee",
+      "name": "Alex Lee",
+      "online": false
+    },
+    {
+      "id": "l_gill",
+      "name": "Leo Gill",
+      "online": false
+    },
+    {
+      "id": "b_cooper",
+      "name": "Britney Cooper",
+      "online": false
+    }
+  ],
+  "chats": [
+    {
+      "id": "Help_Desk",
+      "opened": false,
+      "starred": false
+    },
+    {
+      "id": "Travelling",
+      "opened": false,
+      "starred": false
+    },
+    {
+      "id": "Uni",
+      "opened": false,
+      "starred": false
+    },
+    {
+      "id": "GirlsPower",
+      "opened": false,
+      "starred": false
+    },
+    {
+      "id": "Haters_Gonna_Hate",
+      "opened": false,
+      "starred": false
+    }
+  ],
+  "Help_Desk": [
+    {
+      "id": 1,
+      "author": "Chat Bot",
+      "text": "Добро пожаловать!\nЧтобы начать общаться, создайте свой чат или примите приглашение от друга.\nЯ пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!",
+      "time": "00:00",
+      "selected": false
+    },
+    {
+      "author": "QQQ",
+      "text": "aaaa",
+      "time": "23:59",
+      "selected": false,
+      "id": 2
+    },
+    {
+      "author": "QQQ",
+      "text": "ddddd",
+      "time": "23:59",
+      "selected": false,
+      "id": 3
+    },
+    {
+      "author": "QQQ",
+      "text": "vvvvvvv",
+      "time": "23:59",
+      "selected": false,
+      "id": 4
+    },
+    {
+      "author": "QQQ",
+      "text": "ffffffff",
+      "time": "23:59",
+      "selected": false,
+      "id": 5
+    },
+    {
+      "author": "QQQ",
+      "text": "mmm,m,m,m,",
+      "time": "15:59",
+      "selected": false,
+      "id": 6
+    }
+  ],
+  "Travelling": [],
+  "Uni": [
+    {
+      "author": "QQQ",
+      "text": "jkjkjkjkjk",
+      "time": "20:54",
+      "selected": false,
+      "id": 1
+    }
+  ],
+  "GirlsPower": [],
+  "Haters_Gonna_Hate": [],
+  "start": []
+}

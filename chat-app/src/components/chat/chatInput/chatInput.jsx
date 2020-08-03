@@ -26,8 +26,8 @@ const ChatInput = observer((props) => {
                         } else {
                             time = `${now.getHours()}:${now.getMinutes()}`
                         }
-                        addMessage(props.chat, {author: 'QQQ', text: target.value.slice(0, -1),
-                            time: time, selected: false})
+                        addMessage({author: 'QQQ', text: target.value.slice(0, -1),
+                            time: time, selected: false}, props.chat)
                         target.value=''
                     }
                     }

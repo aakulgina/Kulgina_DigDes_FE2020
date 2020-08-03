@@ -1,8 +1,8 @@
 import React from 'react'
 import CustomScroll from 'react-custom-scroll'
-import { Tooltip } from 'antd'
+import { Tooltip, Modal } from 'antd'
 import { ThreadsIcon } from '../../icons'
-import { PlusCircleOutlined, CloseCircleOutlined, StarFilled } from '@ant-design/icons'
+import { PlusCircleOutlined, CloseCircleOutlined, StarFilled, ExclamationCircleOutlined } from '@ant-design/icons'
 import { NavLink } from 'react-router-dom'
 
 import { observer } from 'mobx-react'
@@ -19,6 +19,8 @@ const ChannelsSection = observer(() => {
           starChat,
           sortStarred } = state
 
+  const { confirm } = Modal
+
   return (
 
     <React.Fragment>
@@ -29,7 +31,7 @@ const ChannelsSection = observer(() => {
           <span className='text'>All threads</span>
         </div>
         <Tooltip title='Create chat'>
-          <PlusCircleOutlined className='newChatIcon'
+          <PlusCircleOutlined className='icon'
             onClick={() => {
               let newChatName = prompt('Введите название нового чата', '')
               addChat(newChatName) }}/>
@@ -47,34 +49,39 @@ const ChannelsSection = observer(() => {
           <div className='channels-list'>
             {sortStarred.map((element, index) => {
               let klass = ''
-              if (chats[element].opened) {
+              if (element.opened) {
                 klass = ' open'
               }
               return(
                 <div key={index} className={`item${klass}`}>
-                  <NavLink to={`/${element}`} onClick={() => {openChat(element)}}>
-                    #{element}
+                  <NavLink to={`/${element.id}`} onClick={() => {openChat(element.id)}}>
+                    #{element.id}
                   </NavLink>
                   <Tooltip title='Delete chat'>
-                    {element !== 'Help_Desk'
-                      ? (
-                        chats[element].opened === true || (currentChat === 'Help_Desk' && chats['Help_Desk'].opened === false)
+                    {element.id !== 'Help_Desk'
+                      ? 
+                      (
+                        element.opened === true 
                         ? (
-                          <NavLink to='/'>
-                            <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element)}} />
-                          </NavLink>
+                          <CloseCircleOutlined className='icon text' onClick={() => {
+                              confirm({ title: 'Are you sure delete this chat?',
+                                        icon: <ExclamationCircleOutlined />,
+                                        onOk() { window.location.assign('/'); deleteChat(element.id) } })
+                            }} />
                         )
                         : (
-                          <NavLink to={`${currentChat}`}>
-                            <CloseCircleOutlined className='icon text' onClick={() => {deleteChat(element, currentChat)}} />
-                          </NavLink>
+                          <CloseCircleOutlined className='icon text' onClick={() => {
+                              confirm({ title: 'Are you sure delete this chat?',
+                                        icon: <ExclamationCircleOutlined />,
+                                        onOk() { deleteChat(element.id, currentChat) } })
+                            }} />
                         )
                       )
                       : (<span className='text' style={{display: 'none'}}>Delete</span>)
                     }
                   </Tooltip>
-                  {chats[element].starred
-                        ? (<StarFilled className='icon added' onClick={() => {starChat(element)}}/>)
+                  {element.starred
+                        ? (<StarFilled className='icon added' onClick={() => {starChat(element.id)}}/>)
                         : ('')
                       }
                 </div>

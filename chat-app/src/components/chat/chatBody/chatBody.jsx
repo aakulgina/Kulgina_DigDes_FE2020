@@ -18,7 +18,7 @@ const ChatBody = observer(() => {
             <div className='chat-body'>
                 {filteredMessages.map((element, index) => {
                     let klass = ''
-                    if (chats[currentChat].messages[index].selected) {
+                    if (element.selected) {
                     klass = ' selected'
                     }
                     return(

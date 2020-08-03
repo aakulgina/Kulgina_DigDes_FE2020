@@ -30,16 +30,16 @@ const ChatHeader = observer((props) => {
                     ? (
                         <Tooltip title='Close'>
                             <NavLink to='/'>
-                                <LeftCircleOutlined className='icon-control' onClick={() => {closeChat(props.chat)}} />
+                                <LeftCircleOutlined className='icon-control' onClick={() => {closeChat(props.chat.id)}} />
                             </NavLink>
                         </Tooltip>
                     )
                     : ( '' )
                 }
-                <span className='chat-name'>#{props.chat}</span>
-                {chats[props.chat].starred
-                    ? (<StarFilled className='icon added' onClick={() => {starChat(props.chat)}} />)
-                    : (<StarOutlined className='icon' onClick={() => {starChat(props.chat)}} />)
+                <span className='chat-name'>#{props.chat.id}</span>
+                {props.chat.starred
+                    ? (<StarFilled className='icon added' onClick={() => {starChat(props.chat.id)}} />)
+                    : (<StarOutlined className='icon' onClick={() => {starChat(props.chat.id)}} />)
                 }
             </div>
             {selectedMessages > 0
