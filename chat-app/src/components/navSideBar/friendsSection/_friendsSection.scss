@@ -20,14 +20,18 @@
 
         &-list .wrapper {
             color: #b5b5b5;
+            padding: 10px;
             @include flex(row, center, '');
+            margin-right: 15px;
 
             &:hover {
                 cursor: pointer;
-            }
+                background: rgba($color: #ffffff, $alpha: 0.2);
+                border-radius: 5px;
 
-            &:not(:last-child) {
-                margin-bottom: 10px;
+                .text {
+                    color: #ffffff;
+                }
             }
 
             .online, .offline {
@@ -36,11 +40,9 @@
             }
 
             .user-photo {
-                width: 32px;
-                height: 32px;
-                background-color: goldenrod;
                 border-radius: 3px;
                 margin-right: 10px;
+                border: 0.5px solid black;
             }
         }
     }

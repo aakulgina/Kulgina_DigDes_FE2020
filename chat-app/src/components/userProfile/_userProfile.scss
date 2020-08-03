@@ -19,15 +19,9 @@
     }
 
     .user {
-        
-        &-photo {
-            background-color: aqua;
-            height: 215px;
-            width: 215px;
-        }
 
         &-info {
-            @include flex(column, '', '');
+            @include flex(column, center, '');
 
             .wrapper {
                 @include flex(row, '', '');

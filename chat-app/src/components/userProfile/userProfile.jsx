@@ -1,44 +1,54 @@
 import React from 'react'
-import { Col, Button, Menu, Dropdown } from 'antd'
+import { Col, Button, Menu, Dropdown, Avatar } from 'antd'
 import { FBIcon, TwitterIcon, InstaIcon, LinkedInIcon } from '../icons'
 import { CaretDownOutlined } from '@ant-design/icons'
+
+const ezLocalTime = require('ez-local-time')
 
 function UserProfile(props) {
 
     const profileMenu = (
         <Menu>
-          <Menu.Item>Add to Friends</Menu.Item>
+          <Menu.Item>Delete from Friends</Menu.Item>
           <Menu.Item>Invite to Chat</Menu.Item>
           <Menu.Item>Call</Menu.Item>
           <Menu.Item>Video Call</Menu.Item>
         </Menu>
       )
 
-    var klass = ''
+    const localTime = ezLocalTime(`${props.user.timeZone}`)
+    
+      var klass = ''
 
-    if (props.online) {
+    if (props.user.online) {
       klass = 'online'
     } else {
       klass = 'offline'
     }
 
-    console.log(props.userName)
-
     return (
         <Col className='profile-bar'>
-          <div className='user-photo'></div>
+          <Avatar shape='square' size={215} src={require(`../../images/${props.user.pic}`)} />
           <div className='user-info'>
             <div className='wrapper'>
-              <span className='text user-name'>{props.userName}</span>
+              <span className='text user-name'>{props.user.name}</span>
               <div className={klass}></div>
             </div>
-            <span className='user-job'>UI Designer</span>
+            <span className='user-job'>{props.user.job}</span>
           </div>
           <div className='social-media'>
-            <FBIcon />
-            <TwitterIcon />
-            <InstaIcon />
-            <LinkedInIcon />
+            <a href={props.user.fb} target='_blank'>
+              <FBIcon />
+            </a>
+            <a href={props.user.twitter} target='_blank'>
+              <TwitterIcon />
+            </a>
+            <a href={props.user.insta} target='_blank'>
+              <InstaIcon />
+            </a>
+            <a href={props.user.linkedin} target='_blank'>
+              <LinkedInIcon />
+            </a>
           </div>
           <div className='actions'>
             <Button className='writeTo' type='primary'>Message</Button>
@@ -50,16 +60,18 @@ function UserProfile(props) {
           </div>
           <div className='user-info'>
             <div className='text'>
-              <span className='label value'>Username: {props.userID}</span>
+              <span className='label value'>Username: {props.user.id}</span>
             </div>
             <div className='text'>
-              <span className='label value'>Email: a-luna@gmail.com</span>
+              <span className='label value'>
+                Email: <a href={`mailto:${props.user.email}`}>{props.user.email}</a>
+              </span>
             </div>
             <div className='text'>
-              <span className='label value'>Skype: amiluna</span>
+              <span className='label value'>Skype: {props.user.skype}</span>
             </div>
             <div className='text'>
-              <span className='label value'>Timezone: 2:21 PM Local Time</span>
+              <span className='label value'>{localTime.time} Local Time</span>
             </div>
           </div>
         </Col>

@@ -3,32 +3,86 @@
     {
       "id": "o_diggs",
       "name": "Orlando Diggs",
-      "online": false
+      "pic": "diggs.jpg",
+      "online": true,
+      "job": "Python Developer",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "ajc@hellmail.com",
+      "skype": "ajc_snake",
+      "timeZone": "Atlantic/Bermuda"
     },
     {
       "id": "c_velasco",
       "name": "Carmen Velasco",
-      "online": false
+      "pic": "velasco.jpg",
+      "online": false,
+      "job": "DevOps",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "agnp@gmail.com",
+      "skype": "true_witch",
+      "timeZone": "Europe/Athens"
     },
     {
       "id": "m_jensen",
       "name": "Marie Jensen",
-      "online": false
+      "pic": "jensen.jpg",
+      "online": true,
+      "job": "FrontEnd Developer",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "marie_j@gmail.com",
+      "skype": "green_hitman",
+      "timeZone": "Asia/Baghdad"
     },
     {
       "id": "a_lee",
       "name": "Alex Lee",
-      "online": false
+      "pic": "lee.jpg",
+      "online": false,
+      "job": "GoLang Developer",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "azph@holymail.com",
+      "skype": "book_lover",
+      "timeZone": "Pacific/Fiji"
     },
     {
       "id": "l_gill",
       "name": "Leo Gill",
-      "online": false
+      "pic": "gill.jpg",
+      "online": false,
+      "job": "HR",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "gyllenhaal@gmail.com",
+      "skype": "real_mysterio",
+      "timeZone": "Australia/Melbourne"
     },
     {
       "id": "b_cooper",
       "name": "Britney Cooper",
-      "online": false
+      "pic": "cooper.jpg",
+      "online": false,
+      "job": "UI Designer",
+      "fb": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "insta": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "email": "bccm@gmail.com",
+      "skype": "captain_marvel",
+      "timeZone": "Indian/Maldives"
     }
   ],
   "chats": [

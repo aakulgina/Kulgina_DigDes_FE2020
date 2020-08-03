@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import ProfileModal from './profileModal'
+import { Avatar } from 'antd'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
@@ -30,8 +31,8 @@ const FriendsSection = observer(() => {
                         return(
                             <div className='wrapper' key={index}>
                                 <div className={klass}></div>
-                                <div className='user-photo'></div>
-                                <ProfileModal user={element.name} id={element.id} />
+                                <Avatar className='user-photo' shape='square' size={35} src={require(`../../../images/${element.pic}`)} />
+                                <ProfileModal user={element} />
                             </div>
                         )
                     })}

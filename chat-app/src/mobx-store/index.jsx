@@ -27,7 +27,16 @@ const messageModel = {
 const userModel = {
     id: "",
     name: "",
-    online: false
+    pic: "",
+    online: false,
+    job: "",
+    fb: "",
+    twitter: "",
+    insta: "",
+    linkedin: "",
+    email: "",
+    skype: "",
+    timeZone: ""
 }
 
 class GlobalStore {

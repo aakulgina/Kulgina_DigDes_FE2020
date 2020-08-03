@@ -23,8 +23,8 @@ class ProfileModal extends React.Component {
     const { visible } = this.state;
     return (
       <React.Fragment>
-        <span onClick={this.showModal}>
-          {this.props.user}
+        <span className='text' onClick={this.showModal}>
+          {this.props.user.name}
         </span>
         <Modal
           visible={visible}
@@ -34,7 +34,7 @@ class ProfileModal extends React.Component {
           bodyStyle={{padding: '0px'}}
           style={{top: '10px'}}
         >
-          <UserProfile userID={this.props.id} userName={this.props.user} online={this.props.online} />
+          <UserProfile user={this.props.user} />
         </Modal>
       </React.Fragment>
     )
