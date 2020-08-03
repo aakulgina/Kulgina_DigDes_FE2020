@@ -1,2 +1,2 @@
-import './profileSideBar.scss'
+import './_profileSideBar.scss'
 export { default } from './profileSideBar'

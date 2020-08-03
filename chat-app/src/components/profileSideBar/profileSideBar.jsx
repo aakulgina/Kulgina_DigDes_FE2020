@@ -20,7 +20,7 @@ function ProfileSideBar() {
           <div className='user-photo'></div>
           <div className='user-info'>
             <div className='wrapper'>
-              <span className='user-name'>Amilia Luna</span>
+              <span className='text user-name'>Amilia Luna</span>
               <div className='online'></div>
             </div>
             <span className='user-job'>UI Designer</span>

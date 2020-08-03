@@ -3,132 +3,30 @@
 @import '../../styles/mixins';
 
 .nav-bar {
-  @include flex(column, '', '');
-  background-color: #25272A;
-  color: white;
-  opacity: 0.75;
-  padding: 36px 25px 10px;
-
-  .header button {
-    background: #25272A;
-    border: 1px solid #25272A;
+    @include flex(column, '', '');
+    background-color: #25272A;
     color: white;
-    padding: 0px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: bold;
-  }
+    opacity: 0.75;
+    padding: 36px 25px 10px;
   
-  .settingIcon, .newChatIcon, .item .icon {
-    font-size: 18px;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-
-  .header {
-    margin-bottom: 30px;
-    @include flex(row, center, space-between);
-  }
-
-  .threads-all, .item a, .item .text, .friends-list .wrapper {
-    color: #b5b5b5;
-  }
-  
-  .threads {
-    margin-bottom: 30px;
-    @include flex(row, '', space-between);
-
-    &-all > :first-child {
-        margin-right: 10px;
-      }
-  }
-  
-  .channels, .friends {
-    @include flex(column, '', '');
-    flex: 1 1 auto;
-    height: 40%;
-
-    > div {
-      margin-bottom:10px;
-    }
-  }
-  
-  .channels-header {
-    @include flex(row, '', space-between);
-  }
-  
-  .channels-list {
-    
-    @include flex(column, '', '');
-
-    & > .item {
-      padding: 5px 10px 5px 15px;
-      @include flex(row, '', space-between);
-
-      a:first-child {
-        width: 100%;
-      }
-
-      .icon {
-        opacity: 1;
-
-        &.added {
-          color: #ffffff;
-          margin-left: 15px;
-        }
-        &.text {
-          display: none;
-          margin-left: 5px;
-        }
-    }
-
-      &:hover, &.open {
+    .settingIcon {
+        font-size: 18px;
+        opacity: 0.6;
         cursor: pointer;
-        background: rgba($color: #ffffff, $alpha: 0.2);
-        color: #ffffff;
-        border-radius: 5px;
+    }
 
-      &:hover {
-          .icon {
-            display: inline-block;
-          }
+    .header {
+        margin-bottom: 30px;
+        @include flex(row, center, space-between);
+
+        button {
+            background: #25272A;
+            border: 1px solid #25272A;
+            color: white;
+            padding: 0px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: bold;
         }
-
-        a, .text {
-          color: #ffffff
-        }
-      }
     }
-  }
-  
-  .channels-header, .friends .header {
-      font-size: 12px;
-      line-height: 14px;
-      color: #919191;
-    }
-  
-  .friends-list .wrapper {
-    @include flex(row, center, '');
-
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    :first-child {
-      margin-right: 5px;
-    }
-
-    .online, .offline {
-      margin-left: 0px;
-      margin-right: 10px;
-    }
-
-    .user-photo {
-      width: 32px;
-      height: 32px;
-      background-color: goldenrod;
-      border-radius: 3px;
-      margin-right: 10px;
-    }
-  }
 }

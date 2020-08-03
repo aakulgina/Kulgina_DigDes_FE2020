@@ -1,0 +1,43 @@
+@import '~antd/dist/antd.css';
+@import '~react-custom-scroll/dist/customScroll.css';
+@import '../../../styles/mixins';
+
+.nav-bar {
+    .friends {
+        @include flex(column, '', '');
+        flex: 1 1 auto;
+        height: 40%;
+
+        > div {
+            margin-bottom:10px;
+        }
+
+        .header {
+            font-size: 12px;
+            line-height: 14px;
+            color: #919191;
+        }
+
+        &-list .wrapper {
+            color: #b5b5b5;
+            @include flex(row, center, '');
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .online, .offline {
+                margin-left: 0px;
+                margin-right: 10px;
+            }
+
+            .user-photo {
+                width: 32px;
+                height: 32px;
+                background-color: goldenrod;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

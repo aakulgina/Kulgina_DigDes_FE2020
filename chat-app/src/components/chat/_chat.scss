@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+@import '~react-custom-scroll/dist/customScroll.css';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import '../../styles/mixins';
+
+.chat {
+    @include flex(column, '', center);
+    color: black;
+
+    .empty .text {
+        font-size: 20px;
+    }
+}

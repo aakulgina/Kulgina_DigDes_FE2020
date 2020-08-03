@@ -74,7 +74,7 @@
     "start": "concurrently \"node scripts/start.js\" \"npm run json-server\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "json-server": "json-server --watch db.json --port 5000"
+    "json-server": "json-server --watch db.json --port 3003 --routes routes.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -97,6 +97,7 @@
     "concurrently": "^5.2.0",
     "json-server": "^0.16.1",
     "node-sass": "^4.14.1",
+    "postcss-merge-rules": "^4.0.3",
     "properties": "^1.2.1"
   },
   "jest": {

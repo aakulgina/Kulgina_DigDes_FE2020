@@ -1,12 +1,15 @@
 @mixin flex($dir, $align, $justify) {
     display: flex;
+    
     @if ($dir != '') {
-      flex-direction: $dir;
+        flex-direction: $dir;
     }
+    
     @if ($align != '') {
-      align-items: $align;
+        align-items: $align;
     }
+    
     @if ($justify != '') {
-      justify-content: $justify;
+        justify-content: $justify;
     }
-  }
+}

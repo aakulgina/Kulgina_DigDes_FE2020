@@ -1,0 +1,66 @@
+@import '~antd/dist/antd.css';
+@import '~react-custom-scroll/dist/customScroll.css';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import '../../../styles/mixins';
+
+.chat-body {
+    padding: 15px;
+    font-size: 13px;
+    line-height: 20px;
+    @include flex(column, '', '');
+  
+    .message {
+    	padding: 5px 5px 5px 10px;
+    	display: flex;
+    	flex-direction: row;
+  
+      	&:not(:hover):not(.selected) {
+        	.wrapper {
+          		margin-left: 20px;
+        	}
+      	}
+  
+      	.icon {
+        	margin-top: 10px;
+        	font-size: 20px;
+        	display: none;
+      	}
+  
+      	.wrapper {
+        	@include flex(column, '', '');
+        	padding: 10px 20px;
+      	}
+  
+      	&:hover {
+        	cursor: pointer;
+  
+        	.icon {
+          		opacity: 0.5;
+          		display: block;
+        	}
+      	}
+  
+      	&.selected {
+        	background-color: rgb(236, 232, 233);
+  
+        	.icon {
+          		opacity: 1;
+          		display: block;
+        	}
+      	}
+  
+      	.sender {
+        	margin-bottom: 10px;
+      	}
+  
+      	.text {
+        	padding-left: 30px;
+        	font-family: inherit;
+        	overflow-wrap: anywhere;
+        
+        	> p {
+          		margin-bottom: 5px;
+        	}
+      	}
+    }
+}
