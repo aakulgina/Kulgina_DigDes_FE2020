@@ -7,19 +7,19 @@
     min-height: 570px;
 }
 
-.online {
+.online, .offline {
     width: 8px;
     height: 8px;
-    background-color: #70cc16;
     border-radius: 45px;
     margin-left: 10px;
 }
 
+.online {
+    background-color: #70cc16;
+}
+
 .offline {
-    width: 8px;
-    height: 8px;
     background-color: #666666;
-    border-radius: 45px;
 }
 
 .text {

@@ -3,8 +3,7 @@ import { Col, Button, Menu, Dropdown } from 'antd'
 import { FBIcon, TwitterIcon, InstaIcon, LinkedInIcon } from '../icons'
 import { CaretDownOutlined } from '@ant-design/icons'
 
-
-function ProfileSideBar() {
+function UserProfile(props) {
 
     const profileMenu = (
         <Menu>
@@ -15,13 +14,23 @@ function ProfileSideBar() {
         </Menu>
       )
 
+    var klass = ''
+
+    if (props.online) {
+      klass = 'online'
+    } else {
+      klass = 'offline'
+    }
+
+    console.log(props.userName)
+
     return (
         <Col className='profile-bar'>
           <div className='user-photo'></div>
           <div className='user-info'>
             <div className='wrapper'>
-              <span className='text user-name'>Amilia Luna</span>
-              <div className='online'></div>
+              <span className='text user-name'>{props.userName}</span>
+              <div className={klass}></div>
             </div>
             <span className='user-job'>UI Designer</span>
           </div>
@@ -41,24 +50,20 @@ function ProfileSideBar() {
           </div>
           <div className='user-info'>
             <div className='text'>
-              <span className='label'>Username</span>
-              <span className='value'>@amilia_lu</span>
+              <span className='label value'>Username: {props.userID}</span>
             </div>
             <div className='text'>
-              <span className='label'>Email</span>
-              <span className='value'>a-luna@gmail.com</span>
+              <span className='label value'>Email: a-luna@gmail.com</span>
             </div>
             <div className='text'>
-              <span className='label'>Skype</span>
-              <span className='value'>amiluna</span>
+              <span className='label value'>Skype: amiluna</span>
             </div>
             <div className='text'>
-              <span className='label'>Timezone</span>
-              <span className='value'>2:21 PM Local Time</span>
+              <span className='label value'>Timezone: 2:21 PM Local Time</span>
             </div>
           </div>
         </Col>
     )
 }
 
-export default ProfileSideBar
+export default UserProfile

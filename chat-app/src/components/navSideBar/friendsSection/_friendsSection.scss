@@ -22,6 +22,10 @@
             color: #b5b5b5;
             @include flex(row, center, '');
 
+            &:hover {
+                cursor: pointer;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 10px;
             }

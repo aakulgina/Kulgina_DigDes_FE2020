@@ -21,7 +21,7 @@ const NavSideBar = observer(() => {
 
   return (
 
-      <Col className='nav-bar' span={5}>
+      <Col className='nav-bar' span={6}>
         
         <div className='header'>
           <Dropdown overlay={nomadList}>

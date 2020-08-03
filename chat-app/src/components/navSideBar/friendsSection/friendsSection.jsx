@@ -1,41 +1,47 @@
 import React from 'react'
 import CustomScroll from 'react-custom-scroll'
+import ProfileModal from './profileModal'
 
-const FriendsSection = () => {
+import { observer } from 'mobx-react'
+import state from '../../../mobx-store'
+
+const FriendsSection = observer(() => {
+
+    const { countFriends,
+            users } = state
 
     return (
 
         <div className='friends'>
             <div className='header'>
                 <span>FRIENDS</span>
-                <span>82</span>
+                <span>{countFriends}</span>
             </div>
             <CustomScroll flex='1 1 auto'>
                 <div className='friends-list'>
-                    {['Orlando Diggs', 'Carmen Velasco'].map ((element, index) => {
-                    return(
-                        <div className='wrapper' key={index}>
-                        <div className='online'></div>
-                        <div className='user-photo'></div>
-                        <div className='text'>{element}</div>
-                        </div>
-                    )
+
+                    {users.map((element, index) => {
+                        let klass = ''
+                        if (element.online) {
+                            klass = 'online'
+                        } else {
+                            klass = 'offline'
+                        }
+                        return(
+                            <div className='wrapper' key={index}>
+                                <div className={klass}></div>
+                                <div className='user-photo'></div>
+                                <ProfileModal user={element.name} id={element.id} />
+                            </div>
+                        )
                     })}
-                    {['Marie Jensen', 'Alex Lee', 'Leo Gill', 'Britney Cooper'].map ((element, index) => {
-                    return(
-                        <div className='wrapper' key={index}>
-                        <div className='offline'></div>
-                        <div className='user-photo'></div>
-                        <div className='text'>{element}</div>
-                        </div>
-                    )
-                    })}
+
                 </div>
             </CustomScroll>
         </div>
 
     )
     
-}
+})
 
 export default FriendsSection
