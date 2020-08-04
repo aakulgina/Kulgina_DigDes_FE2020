@@ -72,10 +72,9 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "concurrently \"node scripts/start.js\" \"npm run json-server\"",
+    "start": "concurrently \"node scripts/start.js\" \"node server.js --watch db.json\"",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "json-server": "json-server --watch db.json --port 3003 --routes routes.json"
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"

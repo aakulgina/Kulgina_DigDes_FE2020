@@ -1,5 +1,0 @@
-{
-    "/chats/:resource/messages": "/:resource",
-    "/chats/:resourse/messages/:id": "/:resourse/:id",
-    "/chats//messages": "/start"
-}

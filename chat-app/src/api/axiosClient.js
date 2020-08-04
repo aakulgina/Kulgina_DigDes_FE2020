@@ -11,7 +11,6 @@ class API {
 
         this.client.interceptors.request.use(
             function (config) {
-                console.log(config)
                 return config
             },
             function (error) {

@@ -122,11 +122,9 @@ class GlobalStore {
     }
 
     @action.bound deleteChat(name, current='Help_Desk') {
-        // this.chats = this.chats.filter(chat => chat.id!=name)
-        // console.log(this.chats)
-        // api.deleteChat(name)
+        this.chats = this.chats.filter(chat => chat.id !== name)
+        api.deleteChat(name)
         this.currentChat = current
-        console.log(`Удаляем ${name}, редайректимся в ${this.currentChat}`)
     }
 
     @action.bound setSelected(index) {
