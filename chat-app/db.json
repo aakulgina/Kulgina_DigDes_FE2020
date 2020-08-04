@@ -116,57 +116,44 @@
     {
       "id": 1,
       "author": "Chat Bot",
-      "text": "Добро пожаловать!\nЧтобы начать общаться, создайте свой чат или примите приглашение от друга.\nЯ пока не умею разговаривать, но в дальнейшем вы сможете получить от меня помощь по любому вопросу!",
+      "text": "Welcome!\nTo begin chatting create new chat or accept invitation from your friend.\nI can't talk yet but soon I'll be ready to help you with everything!",
       "time": "00:00",
       "selected": false
     },
     {
       "author": "QQQ",
-      "text": "aaaa",
-      "time": "23:59",
+      "text": "Can you help me with creating new chat?",
+      "time": "8/4/2020 at  12:21:39 PM",
       "selected": false,
       "id": 2
-    },
-    {
-      "author": "QQQ",
-      "text": "ddddd",
-      "time": "23:59",
-      "selected": false,
-      "id": 3
-    },
-    {
-      "author": "QQQ",
-      "text": "vvvvvvv",
-      "time": "23:59",
-      "selected": false,
-      "id": 4
-    },
-    {
-      "author": "QQQ",
-      "text": "ffffffff",
-      "time": "23:59",
-      "selected": false,
-      "id": 5
-    },
-    {
-      "author": "QQQ",
-      "text": "mmm,m,m,m,",
-      "time": "15:59",
-      "selected": false,
-      "id": 6
     }
   ],
   "Travelling": [],
   "Uni": [
     {
       "author": "QQQ",
-      "text": "jkjkjkjkjk",
-      "time": "20:54",
+      "text": "Hello there!",
+      "time": "8/4/2020 at  12:19:15 PM",
+      "selected": false,
+      "id": 1
+    },
+    {
+      "author": "QQQ",
+      "text": "Do yall miss classes?",
+      "time": "8/4/2020 at  12:19:25 PM",
+      "selected": false,
+      "id": 2
+    }
+  ],
+  "GirlsPower": [],
+  "Haters_Gonna_Hate": [
+    {
+      "author": "QQQ",
+      "text": "I didn't like that book I got last Sun. It's boring.",
+      "time": "8/4/2020 at  12:21:12 PM",
       "selected": false,
       "id": 1
     }
   ],
-  "GirlsPower": [],
-  "Haters_Gonna_Hate": [],
   "start": []
 }

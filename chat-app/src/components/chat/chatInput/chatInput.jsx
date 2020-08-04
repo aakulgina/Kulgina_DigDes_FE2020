@@ -5,6 +5,8 @@ import { SmileOutlined, AudioOutlined, PaperClipOutlined } from '@ant-design/ico
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'
 
+const ezLocalTime = require('ez-local-time')
+
 const ChatInput = observer((props) => {
 
     const { addMessage } = state
@@ -19,15 +21,9 @@ const ChatInput = observer((props) => {
                 onKeyUp={({ target, keyCode, shiftKey }) => {
                     if (!shiftKey && keyCode === 13) {
                     if (target.value.replace(/\n/g, '').replace(/\s/g, '') !== '') {
-                        let now = new Date()
-                        let time = ''
-                        if (now.getMinutes() < 10) {
-                            time = `${now.getHours()}:0${now.getMinutes()}`
-                        } else {
-                            time = `${now.getHours()}:${now.getMinutes()}`
-                        }
+                        let time = ezLocalTime()
                         addMessage({author: 'QQQ', text: target.value.slice(0, -1),
-                            time: time, selected: false}, props.chat)
+                            time: `${time.date} at ${time.time}`, selected: false}, props.chat)
                         target.value=''
                     }
                     }
