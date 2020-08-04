@@ -54,8 +54,15 @@
         }
     }
 
-    .social-media > :not(:last-child) {
+    .social-media {
+        
+        > :not(:last-child) {
         margin-right: 5px;
+        }
+
+        .icon:hover {
+            fill: #026863;
+        }
     }
 
     .actions {

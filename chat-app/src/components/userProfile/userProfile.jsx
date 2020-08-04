@@ -37,16 +37,16 @@ function UserProfile(props) {
             <span className='user-job'>{props.user.job}</span>
           </div>
           <div className='social-media'>
-            <a href={props.user.fb} target='_blank'>
+            <a className='icon' href={props.user.fb} target='_blank' rel="noopener noreferrer">
               <FBIcon />
             </a>
-            <a href={props.user.twitter} target='_blank'>
+            <a className='icon' href={props.user.twitter} target='_blank' rel="noopener noreferrer">
               <TwitterIcon />
             </a>
-            <a href={props.user.insta} target='_blank'>
+            <a className='icon' href={props.user.insta} target='_blank' rel="noopener noreferrer">
               <InstaIcon />
             </a>
-            <a href={props.user.linkedin} target='_blank'>
+            <a className='icon' href={props.user.linkedin} target='_blank' rel="noopener noreferrer">
               <LinkedInIcon />
             </a>
           </div>

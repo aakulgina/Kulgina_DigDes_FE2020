@@ -1,6 +1,6 @@
 import React from 'react'
 import 'antd/dist/antd.css'
-import { Modal } from 'antd'
+import { Modal, Avatar } from 'antd'
 import UserProfile from '../../../userProfile'
 
 class ProfileModal extends React.Component {
@@ -23,9 +23,13 @@ class ProfileModal extends React.Component {
     const { visible } = this.state;
     return (
       <React.Fragment>
-        <span className='text' onClick={this.showModal}>
-          {this.props.user.name}
-        </span>
+        <div className='wrapper' onClick={this.showModal}>
+          <div className={this.props.klass}></div>
+          <Avatar className='user-photo' shape='square' size={35} src={require(`../../../../images/${this.props.user.pic}`)} />
+          <span className='text'>
+            {this.props.user.name}
+          </span>
+        </div>
         <Modal
           visible={visible}
           title="User Info"

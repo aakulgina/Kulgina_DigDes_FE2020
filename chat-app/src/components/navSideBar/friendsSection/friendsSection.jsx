@@ -28,13 +28,7 @@ const FriendsSection = observer(() => {
                         } else {
                             klass = 'offline'
                         }
-                        return(
-                            <div className='wrapper' key={index}>
-                                <div className={klass}></div>
-                                <Avatar className='user-photo' shape='square' size={35} src={require(`../../../images/${element.pic}`)} />
-                                <ProfileModal user={element} />
-                            </div>
-                        )
+                        return( <ProfileModal key={index} klass={klass} user={element}/> )
                     })}
 
                 </div>
