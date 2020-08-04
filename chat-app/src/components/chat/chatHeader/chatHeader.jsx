@@ -17,8 +17,7 @@ const ChatHeader = observer((props) => {
         unselectAll,
         deleteSelectedMessages,
         cleanSearch,
-        starChat,
-        chats } = state
+        starChat } = state
 
     const { confirm } = Modal
 

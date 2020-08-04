@@ -1,7 +1,6 @@
 import React from 'react'
 import CustomScroll from 'react-custom-scroll'
 import ProfileModal from './profileModal'
-import { Avatar } from 'antd'
 
 import { observer } from 'mobx-react'
 import state from '../../../mobx-store'

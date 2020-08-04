@@ -11,7 +11,7 @@ import ChatInput from './chatInput'
 
 const Chat = observer(() => {
 
-  const { chats, messages } = state
+  const { chats } = state
   
   return (
     <Col className='chat' flex='auto'>

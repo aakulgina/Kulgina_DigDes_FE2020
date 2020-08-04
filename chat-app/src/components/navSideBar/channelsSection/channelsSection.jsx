@@ -11,7 +11,6 @@ import state from '../../../mobx-store'
 const ChannelsSection = observer(() => {
 
   const { addChat,
-          chats,
           countChats,
           deleteChat,
           currentChat,

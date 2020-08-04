@@ -9,9 +9,7 @@ import state from '../../../mobx-store'
 const ChatBody = observer(() => {
 
     const { filteredMessages,
-        chats,
-        setSelected,
-        currentChat } = state
+        setSelected } = state
 
     return (
         <CustomScroll flex='1 1 auto' keepAtBottom={true}>

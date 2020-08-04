@@ -2,14 +2,6 @@ import { observable, computed, action } from 'mobx'
 import api from '../api'
 import axios from "axios"
 
-let now = new Date()
-let time = ''
-if (now.getMinutes() < 10) {
-    time = `${now.getHours()}:0${now.getMinutes()}`
-    } else {
-    time = `${now.getHours()}:${now.getMinutes()}`
-}
-
 const chatModel = {
     id: '',
     opened: false,
